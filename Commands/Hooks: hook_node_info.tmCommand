@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
+
+echo "/**
+ * Implementation of hook_node_info().
+ */
+function {$basename}_node_info() {
+	return array(
+		'\${1:{$basename}}' =&gt; array(
+			'name' =&gt; t('\${2:". ucfirst(str_replace('_', ' ', $basename)) ."}'),
+			'module' =&gt; '\${3:{$basename}}',
+			'description' =&gt; t('\${4:A {$basename} is a pretty simple content type that just works.}'),\$5
+		),\${6:
+		'\${7:{$basename}}' =&gt; array(
+			'name' =&gt; t('\${8:". ucfirst(str_replace('_', ' ', $basename)) ."}'),
+			'module' =&gt; '\${9:{$basename}}',
+			'description' =&gt; t('\${10:A {$basename} is a pretty simple content type that just works.}'),\$11
+		),\$12}
+	);
+}
+\$13";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Hooks: hook_node_info</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>hook_node_info</string>
+	<key>uuid</key>
+	<string>30FD2CDB-CAFB-4FC0-A13B-5582C2400AD6</string>
+</dict>
+</plist>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+echo "'#tree' =&gt; \${1:TRUE},\$2";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Forms API: #tree</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>#tree</string>
+	<key>uuid</key>
+	<string>5B5D5474-459F-FCE3-6BA4-FA4F887EF765</string>
+</dict>
+</plist>

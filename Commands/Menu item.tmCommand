@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
+
+echo "\\\$items[] = array(
+	'path' =&gt; '\${1:admin/settings/$basename}',
+	'title' =&gt; t('\${2:Menu item}'),
+	'description' =&gt; t('\${3:The description of the menu item. It is used as title attribute and on the administration overview page.}'),
+	'callback' =&gt; '\${4:drupal_get_form}',
+	'callback arguments' =&gt; array(\$5),
+	'access' =&gt; user_access('\${6:administer $basename}'),
+	'type' =&gt; MENU_NORMAL_ITEM,\$7
+);
+\$8";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Menu item</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>$item</string>
+	<key>uuid</key>
+	<string>AC4889D0-71AE-42EF-8EEE-C737403A59ED</string>
+</dict>
+</plist>

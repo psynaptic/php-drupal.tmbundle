@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
+
+echo "/**
+ * Implementation of hook_help().
+ */
+function {$basename}_help(\\\$section) {
+	switch (\\\$section) {
+		case 'admin/help#$basename':
+			return t('\$1');
+			break;\${2:
+		case '\$3':
+		  return t('\$4');
+		  break;\$5}
+	}
+}
+\$6";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Hooks: hook_help</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>hook_help</string>
+	<key>uuid</key>
+	<string>8D89DCB1-6B18-4A17-88B7-62A40BAC607B</string>
+</dict>
+</plist>

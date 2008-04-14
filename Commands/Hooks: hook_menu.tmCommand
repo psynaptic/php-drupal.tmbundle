@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
+
+echo "/**
+ * Implementation of hook_menu().
+ */
+function {$basename}_menu(\\\$may_cache) {
+	\\\$items = array();
+
+	if (\\\$may_cache) {
+		\$1
+	}\${2:
+	else {
+		\$3
+	\}}
+	return \\\$items;
+}
+\$4";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Hooks: hook_menu</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>hook_menu</string>
+	<key>uuid</key>
+	<string>FC9007C9-418B-4FD0-B6A2-ABCA640C62F9</string>
+</dict>
+</plist>

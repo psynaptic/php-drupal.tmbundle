@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+echo "array(
+	'#type' =&gt; 'weight',
+	'#title' =&gt; t('\${1:Weight}'),
+	'#description' =&gt; t('\${3:The weight defines the order of the element.}'),
+	'#delta' =&gt; \${4:10},
+	'#default_value' =&gt; \${5:0},\$6
+);
+\$7";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Forms API: weight</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>weight</string>
+	<key>uuid</key>
+	<string>90E1482D-0059-40D8-9D40-BF437751FC2B</string>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>\$result = db_query(\$sql${1:, });
+while (\$row = db_fetch_object(\$result)) {
+  $2
+}
+$0</string>
+	<key>name</key>
+	<string>Query and iterate</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>query</string>
+	<key>uuid</key>
+	<string>871EBE12-E7C0-46C5-A3B0-B56A999B373E</string>
+</dict>
+</plist>

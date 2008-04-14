@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+echo "array(
+	'#type' =&gt; 'file',
+	'#title' =&gt; t('\${1:File}'),
+	'#description' =&gt; t('\${2:Select the file you want to attach.}'),
+	'#type' =&gt; \${3:40},\$4
+);
+\$5";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Forms API: file</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>file</string>
+	<key>uuid</key>
+	<string>B37BF3E3-1695-411A-B2E8-EC052196F714</string>
+</dict>
+</plist>

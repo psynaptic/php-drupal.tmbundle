@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+echo "'#size' =&gt; \${1:30},\$2";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Forms API: #size</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>#size</string>
+	<key>uuid</key>
+	<string>51C5E339-46F4-3680-2A83-9039D9CD2967</string>
+</dict>
+</plist>

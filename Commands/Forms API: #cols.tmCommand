@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+
+echo "'#cols' =&gt; \${1:40},\$2";</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Forms API: #cols</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>#cols</string>
+	<key>uuid</key>
+	<string>1D208098-E135-8C73-7216-A746EC4DFEB1</string>
+</dict>
+</plist>

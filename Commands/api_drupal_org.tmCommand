@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>if grep &lt;&lt;&lt;${TM_CURRENT_WORD:-!} -Esq '^[a-zA-Z0-9_]+$'
+then
+FILENAME=${TM_FILEPATH##*/}
+BASENAME=${FILENAME%%.*};
+if [ `echo "$TM_CURRENT_WORD" | grep -E "${BASENAME}_[0-9A-Za-z_]"` ]
+then
+HOOK=${TM_CURRENT_WORD##${BASENAME}}
+URL="http://api.drupal.org/apis/${TM_drupal_version}/hook${HOOK}"
+else
+URL="http://api.drupal.org/apis/${TM_drupal_version}/${TM_CURRENT_WORD}"
+fi
+exit_show_html "&lt;meta http-equiv='Refresh' content='0;URL=$URL'&gt;"
+else echo "Nothing to lookup (hint: place the caret on a function name)"
+fi</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^d</string>
+	<key>name</key>
+	<string>api.drupal.org</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>uuid</key>
+	<string>5F0E71DA-6D1D-4AFB-A396-31C650F6B313</string>
+</dict>
+</plist>

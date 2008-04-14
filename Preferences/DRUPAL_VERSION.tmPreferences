@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>DRUPAL_VERSION</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>settings</key>
+	<dict>
+		<key>DRUPAL_VERSION</key>
+		<integer>5</integer>
+	</dict>
+	<key>uuid</key>
+	<string>C3CF9E6B-2D32-4826-A9D6-83E8C2F2FF3C</string>
+</dict>
+</plist>
