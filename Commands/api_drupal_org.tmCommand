@@ -24,9 +24,9 @@ fi</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^d</string>
+	<string>^h</string>
 	<key>name</key>
-	<string>api.drupal.org</string>
+	<string>Documentation for Word</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
