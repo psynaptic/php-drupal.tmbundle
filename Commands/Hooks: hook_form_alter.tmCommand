@@ -27,7 +27,7 @@ function {$basename}_form_alter(\\\$form_id, &amp;\\\$form) {\${1:
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Hooks: hook_form_alter</string>
+	<string>hook_form_alter</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

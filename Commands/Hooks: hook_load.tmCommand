@@ -20,7 +20,7 @@ function {$basename}_load(&amp;\\\$node) {
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Hooks: hook_load</string>
+	<string>hook_load</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

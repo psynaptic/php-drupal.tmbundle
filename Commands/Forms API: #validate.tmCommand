@@ -14,7 +14,7 @@ echo "'#validate' =&gt; array('\${1:$basename_validate}'),\$2";</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Forms API: #validate</string>
+	<string>#validate</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

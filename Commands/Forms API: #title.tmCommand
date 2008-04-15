@@ -12,7 +12,7 @@ echo "'#title' =&gt; t('\${1:Title}'),\$2";</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Forms API: #title</string>
+	<string>#title</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

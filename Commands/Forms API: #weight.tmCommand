@@ -12,7 +12,7 @@ echo "'#weight' =&gt; \${1:0},\$2";</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Forms API: #weight</string>
+	<string>#weight</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

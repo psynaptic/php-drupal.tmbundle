@@ -12,7 +12,7 @@ echo "'#default_value' =&gt; '\${1:Value}',\$2";</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>Forms API: #default_value</string>
+	<string>#default_value</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>
