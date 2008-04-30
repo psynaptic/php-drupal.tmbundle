@@ -3,7 +3,7 @@
 
 /**
  * @file
- * This is the file description.
+ * This is the file description for ${TM_MODULE_TITLE} module.
  *
  * In this more verbose, multi-line description, you can specify what this
  * file does exactly. Make sure to wrap your documentation in column 78 so

@@ -1,0 +1,28 @@
+; $Id$
+name = ${TM_MODULE_TITLE}
+description = "The description of this module"
+
+; Required core version (Drupal 6+; no effect in Drupal 5)
+core = 6.x
+
+
+; Package name (see http://drupal.org/node/101009 for a list of names)
+; package = 
+
+
+; PHP version requirement (Drupal 6+)
+; php = 5.2
+
+
+; Module dependencies (Drupal 6+ style)
+; dependencies[] = mymodule
+; dependencies[] = theirmodule
+
+; Module dependencies (Drupal 5 style)
+; dependencies = mymodule theirmodule
+
+
+
+; For further information about configuration options, see
+; - http://drupal.org/node/101009 (Drupal 5)
+; - http://drupal.org/node/231036 (Drupal 6)
