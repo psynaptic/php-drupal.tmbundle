@@ -14,9 +14,10 @@ BASENAME=${FILENAME%%.*};
 if [ `echo "$TM_CURRENT_WORD" | grep -E "${BASENAME}_[0-9A-Za-z_]"` ]
 then
 HOOK=${TM_CURRENT_WORD##${BASENAME}}
-URL="http://api.drupal.org/apis/${DRUPAL_VERSION}/hook${HOOK}"
+URL="http://api.drupal.org/api/function/hook${HOOK}/${DRUPAL_VERSION}"
 else
-URL="http://api.drupal.org/apis/${DRUPAL_VERSION}/${TM_CURRENT_WORD}"
+URL="http://api.drupal.org/api/function/${TM_CURRENT_WORD}/${DRUPAL_VERSION}"
+
 fi
 exit_show_html "&lt;meta http-equiv='Refresh' content='0;URL=$URL'&gt;"
 else echo "Nothing to lookup (hint: place the caret on a function name)"
