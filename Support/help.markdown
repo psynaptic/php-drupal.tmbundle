@@ -46,10 +46,43 @@ Set the following Shell Variable:
 
 Using api.drupal.org will only give you reference documentation for Drupal core functions. If you wish to be able to receive reference documentation for most of Drupal's contributed modules then use the following settings instead:
 
-<table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:left;margin-bottom:1em">
   <tr><th>variable</th><th>value</th></tr>
   <tr><td>TM_DRUPAL_API</td><td>http://drupalcontrib.org/apis/</td></tr>
 </table>
+
+# Usage
+
+## Hooks
+
+A number of Drupal hooks have been implemented as **tab triggers**. Try the following:
+
+<code>
+&lt;?php
+hook_help&#x21E5;
+</code>
+
+Tab stops have been used throughout the snippets to make it easier to edit the inserted code. Try pressing tab a few times to step through code. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
+
+## FAPI Form Controls
+
+Form control snippets have been added for easy form generation. Try the following:
+
+<code>
+&lt;?php
+$form['my_form'] = checkboxes&#x21E5;
+</code>
+
+Again, tab stops have been used to allow you to edit the details. Try tabbing though.
+
+## FAPI Elements
+
+Adding more elements to the form is easy. Try the following:
+
+<code>
+&lt;?php
+\#description&#x21E5;
+</code>
 
 # Resources
 
