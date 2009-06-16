@@ -21,14 +21,26 @@ function textmate_find_command($name) {
 
 function textmate_detect_drupal_version() {
   if (isset($_SERVER['TM_DIRECTORY'])) {
+    // Check .info file in the current directory.
     $info_files = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
     if (!empty($info_files) && $info = textmate_parse_info_file(key($info_files))) {
       if (!empty($info['core']))
         return (int)$info['core'];
     }
-    else {
-      return $_ENV['TM_DRUPAL_VERSION'];
+
+    // Loop upwards until we find a Drupal installation.
+    $path = explode('/', $_SERVER['TM_DIRECTORY']);
+    while (!empty($path)) {
+      $system_module = implode('/', $path) . '/modules/system/system.module';
+      if (file_exists($system_module)) {
+        include $system_module;
+        return (int)VERSION;
+      }
+      array_pop($path);
     }
+
+    if (isset($_ENV['TM_DRUPAL_VERSION']))
+      return $_ENV['TM_DRUPAL_VERSION'];
   }
 }
 
