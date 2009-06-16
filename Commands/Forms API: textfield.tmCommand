@@ -7,15 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
-
-echo "array(
-	'#type' =&gt; 'textfield',
-	'#title' =&gt; t('\${1:Title}'),
-	'#description' =&gt; t('\${2:The title you enter here appears on the page.}'),
-	'#size' =&gt; \${3:40},
-	'#maxlength' =&gt; \${4:255},\$5
-);
-\$6";</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('textfield');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>

@@ -7,14 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
-
-echo "array(
-	'#type' =&gt; 'file',
-	'#title' =&gt; t('\${1:File}'),
-	'#description' =&gt; t('\${2:Select the file you want to attach.}'),
-	'#type' =&gt; \${3:40},\$4
-);
-\$5";</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('file');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>

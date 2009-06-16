@@ -1,1 +1,1 @@
-This command does not exist for this version.
+This snippet does not exist for the specified version Drupal.

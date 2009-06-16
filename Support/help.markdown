@@ -1,9 +1,57 @@
 # Introduction
 
-Please use the [Textmate project](http://drupal.org/project/textmate) at drupal.org for filing bug reports, feature requests, and patches for this bundle. General discussion happens in the [Drupal IDE group](http://groups.drupal.org/drupal-ide).
+The PHP Drupal bundle provides Drupal developers with shortcuts for creating Drupal modules and themes.
 
-#`TM_drupal_version` variable
+## Features
 
-You will want to setup a [Project Dependent Variable](?project_dependent_variables) whose name is `TM_drupal_version` and whose value is 5 or 6 or 7, depending on your Drupal version. This is initially used by the `Documentation for Word` command to show [api.drupal.org](http://api.drupal.org) documentation for the proper version of Drupal. We expect to vary some bundle items as well by `TM_drupal_version` (e.g. `hook_menu()`).
+- Automatic detection of Drupal version when .info file available
+- Drupal 5 and 6 supported
+- All FAPI controls and elements
+- Menu items
+- Some commonly used hooks
 
-If you always work with just one version of Drupal, you may setup a global variable using `TextMate => Preferences => Advanced => Shell Variables`.
+Planned features...
+
+- Theme functions
+- Template files
+- More hooks
+
+# Installation
+
+There are 2 Shell Variables which should be set for this bundle. Shell Variables may be set up using `TextMate => Preferences => Advanced => Shell Variables`.
+
+## Drupal version:
+
+The bundle automatically detects which version of Drupal you are using by checking the .info files of the project you are currently working with. It is a good idea to set up a fallback for cases where you are not using a project or something fails.
+
+Set the following Shell Variable:
+
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
+  <tr><th>variable</th><th>value</th></tr>
+  <tr><td>TM_DRUPAL_VERSION</td><td>6</td></tr>
+</table>
+
+You can change this variable when switching between projects or alternatively you may wish to set up a [Project Dependent Variable](?project_dependent_variables).
+
+## API location:
+
+The `Documentation for Word` command performs a documentation lookup for any Drupal functions. 
+
+Set the following Shell Variable:
+
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
+  <tr><th>variable</th><th>value</th></tr>
+  <tr><td>TM_DRUPAL_API</td><td>http://api.drupal.org/apis/</td></tr>
+</table>
+
+Using api.drupal.org will only give you reference documentation for Drupal core functions. If you wish to be able to receive reference documentation for most of Drupal's contributed modules then use the following settings instead:
+
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
+  <tr><th>variable</th><th>value</th></tr>
+  <tr><td>TM_DRUPAL_API</td><td>http://drupalcontrib.org/apis/</td></tr>
+</table>
+
+# Resources
+
+- [Drupal Textmate project](http://drupal.org/project/textmate) - Bug reports, feature requests and patches welcome.
+- [Drupal IDE group](http://groups.drupal.org/drupal-ide) - General discussion

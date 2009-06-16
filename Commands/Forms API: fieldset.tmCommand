@@ -7,18 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
-
-$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
-
-echo "array(
-	'#type' =&gt; 'fieldset',
-	'#title' =&gt; t('\${1:Grouped items}'),
-	'#description' =&gt; t('\${2:The description appears at the top of the fieldset.}'),
-	'#collapsible' =&gt; \${3:TRUE},
-	'#collapsed' =&gt; \${4:TRUE},
-	'#access' =&gt; user_access('\${5:administer $basename}'),\$6
-);
-\$7";</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('fieldset');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>

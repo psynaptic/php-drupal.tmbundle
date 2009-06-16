@@ -5,7 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>DRUPAL_VERSION=${TM_drupal_version:=6}
+	<string>DRUPAL_VERSION=${TM_DRUPAL_VERSION:=6}
+API_LOCATION=${TM_DRUPAL_API}
 
 if grep &lt;&lt;&lt;${TM_CURRENT_WORD:-!} -Esq '^[a-zA-Z0-9_]+$'
 then
@@ -14,9 +15,9 @@ BASENAME=${FILENAME%%.*};
 if [ `echo "$TM_CURRENT_WORD" | grep -E "${BASENAME}_[0-9A-Za-z_]"` ]
 then
 HOOK=${TM_CURRENT_WORD##${BASENAME}}
-URL="http://api.drupal.org/api/function/hook${HOOK}/${DRUPAL_VERSION}"
+URL="${API_LOCATION}/api/function/hook${HOOK}/${DRUPAL_VERSION}"
 else
-URL="http://api.drupal.org/api/function/${TM_CURRENT_WORD}/${DRUPAL_VERSION}"
+URL="${API_LOCATION}/api/function/${TM_CURRENT_WORD}/${DRUPAL_VERSION}"
 
 fi
 exit_show_html "&lt;meta http-equiv='Refresh' content='0;URL=$URL'&gt;"

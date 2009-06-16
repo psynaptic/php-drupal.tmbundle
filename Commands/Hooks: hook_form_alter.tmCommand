@@ -7,47 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
-
-$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
-$drupal_version = (isset($_ENV['TM_drupal_version'])) ? $_ENV['TM_drupal_version'] : 6;
-
-if ($drupal_version == 5) {
-
-echo "/**
- * Implementation of hook_form_alter().
- */
-function {$basename}_form_alter(\\\$form_id, &amp;\\\$form) {\${1:
-	switch (\\\$form_id) {
-		case '\${2:form_id}':
-			\${3:// Place your form altering code here.}
-			break;\${4:
-		case '\${5:form_id}':
-			\${6:// Place your form altering code here.}
-			break;}\$7
-	\}}
-}
-\$8";
-
-}
-elseif ($drupal_version == 6) {
-
-echo "/**
- * Implementation of hook_form_alter().
- */
-function {$basename}_form_alter(&amp;\\\$form, \\\$form_state, \\\$form_id) {\${1:
-	switch (\\\$form_id) {
-		case '\${2:form_id}':
-			\${3:// Place your form altering code here.}
-			break;\${4:
-		case '\${5:form_id}':
-			\${6:// Place your form altering code here.}
-			break;}\$7
-	\}}
-}
-\$8";
-
-};
-	</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('hook_form_alter');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>

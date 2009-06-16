@@ -20,13 +20,16 @@ function textmate_find_command($name) {
 }
 
 function textmate_detect_drupal_version() {
-  $info_files = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
-  if (!empty($info_files) && $info = textmate_parse_info_file(key($info_files)))
-    if (!empty($info['core']))
-      return (int)$info['core'];
-    else
-      return 5;
-
+  if (isset($_SERVER['TM_DIRECTORY'])) {
+    $info_files = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
+    if (!empty($info_files) && $info = textmate_parse_info_file(key($info_files))) {
+      if (!empty($info['core']))
+        return (int)$info['core'];
+    }
+    else {
+      return $_ENV['TM_DRUPAL_VERSION'];
+    }
+  }
 }
 
 function textmate_parse_info_file($filename) {

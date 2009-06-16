@@ -11,6 +11,8 @@ html_header "PHP Drupal Bundle Help" "PHP Drupal"
 html_footer</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
 	<key>name</key>
 	<string>Help</string>
 	<key>output</key>

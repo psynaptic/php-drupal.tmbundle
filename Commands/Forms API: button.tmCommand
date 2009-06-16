@@ -7,12 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env php
 &lt;?php
-
-echo "array(
-	'#type' =&gt; 'button', 
-	'#value' =&gt; t('\${1:Button}'),\$2
-);
-\$3";</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('button');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
