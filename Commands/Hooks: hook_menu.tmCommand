@@ -5,26 +5,11 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/php
+	<string>#!/usr/bin/env php
 &lt;?php
-
-$basename = isset($_ENV['TM_FILEPATH']) ? preg_replace('~^(.*)\..*$~', '$1', basename($_ENV['TM_FILEPATH'])) : 'module';
-
-echo "/**
- * Implementation of hook_menu().
- */
-function {$basename}_menu(\\\$may_cache) {
-	\\\$items = array();
-
-	if (\\\$may_cache) {
-		\$1
-	}\${2:
-	else {
-		\$3
-	\}}
-	return \\\$items;
-}
-\$4";</string>
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('hook_menu');
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>

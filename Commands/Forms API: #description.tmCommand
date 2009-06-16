@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/php
+	<string>#!/usr/bin/env php
 &lt;?php
 
 echo "'#description' =&gt; t('\${1:Title}'),\$2";</string>

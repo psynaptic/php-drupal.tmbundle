@@ -5,7 +5,7 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/php
+	<string>#!/usr/bin/env php
 &lt;?php
 
 echo "'#maxlength' =&gt; \${1:255},\$2";</string>
