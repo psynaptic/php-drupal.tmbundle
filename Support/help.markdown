@@ -41,14 +41,14 @@ Set the following Shell Variable:
 
 <table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
   <tr><th>variable</th><th>value</th></tr>
-  <tr><td>TM_DRUPAL_API</td><td>http://api.drupal.org/apis/</td></tr>
+  <tr><td>TM_DRUPAL_API</td><td>http://api.drupal.org</td></tr>
 </table>
 
 Using api.drupal.org will only give you reference documentation for Drupal core functions. If you wish to be able to receive reference documentation for most of Drupal's contributed modules then use the following settings instead:
 
 <table border="1" cellspacing="0" cellpadding="5" style="text-align:left;margin-bottom:1em">
   <tr><th>variable</th><th>value</th></tr>
-  <tr><td>TM_DRUPAL_API</td><td>http://drupalcontrib.org/apis/</td></tr>
+  <tr><td>TM_DRUPAL_API</td><td>http://drupalcontrib.org</td></tr>
 </table>
 
 # Usage

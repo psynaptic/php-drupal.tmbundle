@@ -6,6 +6,10 @@
 	<string>jrvgmzna@grwnfn.pbz</string>
 	<key>contactName</key>
 	<string>Moshe Weitzman</string>
+	<key>deleted</key>
+	<array>
+		<string>267F76F9-D5C9-4135-A515-85FC2A7170E2</string>
+	</array>
 	<key>description</key>
 	<string>An open source framework and content management system written in PHP.</string>
 	<key>mainMenu</key>

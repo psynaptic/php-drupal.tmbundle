@@ -1,5 +1,6 @@
 array(
   '#type' => 'checkbox',
-  '#title' => t('${1:Enable}'),$2
+  '#title' => t('${1:Enable}'),
+  '#default_value' => ${2:-1},$3
 );
-$3
+$4

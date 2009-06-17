@@ -8,6 +8,10 @@ $basename = isset($_SERVER['TM_FILENAME']) ? preg_replace('/\..+$/', '', $_SERVE
 function textmate_find_command($name) {
   global $version;
 
+  if (!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) {
+    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/not_installed_properly.php";
+  }
+
   $files = array(
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$name.$version.php",
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$name.php",
