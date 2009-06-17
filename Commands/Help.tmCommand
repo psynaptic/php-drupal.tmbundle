@@ -18,7 +18,7 @@ html_footer</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
-	<string>source.php</string>
+	<string>source.php, text.html.basic</string>
 	<key>uuid</key>
 	<string>422C6E4D-43E6-445D-80F7-BA660A7BB46F</string>
 </dict>

@@ -42,9 +42,9 @@ function textmate_detect_drupal_version() {
       }
       array_pop($path);
     }
-
-    if (isset($_ENV['TM_DRUPAL_VERSION']))
-      return $_ENV['TM_DRUPAL_VERSION'];
+  }
+  else {
+    return $_ENV['TM_DRUPAL_VERSION'];
   }
 }
 
