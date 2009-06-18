@@ -13,7 +13,7 @@ include textmate_find_command('element_collapsible');
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>#collapsible</string>
+	<string>element_collapsible</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

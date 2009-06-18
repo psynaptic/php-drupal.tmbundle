@@ -13,7 +13,7 @@ include textmate_find_command('element_description');
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>#description</string>
+	<string>element_description</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

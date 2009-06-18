@@ -13,7 +13,7 @@ include textmate_find_command('element_size');
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>#size</string>
+	<string>element_size</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

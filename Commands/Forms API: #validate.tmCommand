@@ -13,7 +13,7 @@ include textmate_find_command('element_validate');
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>#validate</string>
+	<string>element_validate</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>

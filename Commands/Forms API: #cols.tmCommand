@@ -13,7 +13,7 @@ include textmate_find_command('element_cols');
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>#cols</string>
+	<string>element_cols</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>
