@@ -20,8 +20,9 @@ function textmate_find_command($name) {
     $folder = 'hooks/';
   }
 
-  if (strpos($name, '#') === 0) {
+  if (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
+    $name = str_replace('element_', '', $name);
   }
 
   if (strpos($name, 'fapi_') === 0) {

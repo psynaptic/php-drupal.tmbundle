@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-include textmate_find_command('#validate');
+include textmate_find_command('element_validate');
 </string>
 	<key>input</key>
 	<string>none</string>
