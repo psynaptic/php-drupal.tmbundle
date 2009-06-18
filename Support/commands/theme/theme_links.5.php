@@ -8,7 +8,7 @@
  * @return
  *   A string containing an unordered list of links.
  */
-function theme_links(\$links, \$attributes = array('class' => 'links')) {
+function <?php print $basename; ?>_links(\$links, \$attributes = array('class' => 'links')) {
   \$output = '';
 
   if (count(\$links) > 0) {

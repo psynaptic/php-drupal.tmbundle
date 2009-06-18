@@ -1,7 +1,7 @@
 /**
  * Implementation of hook_access().
  */
-function hook_access(\$op, \$node) {
+function <?php print $basename; ?>_access(\$op, \$node) {
   global \$user;
 
   if (\$op == 'create') {

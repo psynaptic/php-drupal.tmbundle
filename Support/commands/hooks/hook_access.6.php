@@ -1,7 +1,7 @@
 /**
  * $1
  */
-function hook_access(\$op, \$node, \$account) {
+function <?php print $basename; ?>_access(\$op, \$node, \$account) {
   if (\$op == 'create') {
     return user_access('create stories', \$account);
   }
