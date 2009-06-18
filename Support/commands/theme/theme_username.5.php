@@ -7,7 +7,7 @@
  *   A string containing an HTML link to the user's page if the passed object
  *   suggests that this is a site user. Otherwise, only the username is returned.
  */
-function theme_username(\$object) {
+function ${1:phptemplate}_username(\$object) {
 
   if (\$object->uid && \$object->name) {
     // Shorten the name when it is too long or it will break many tables.
@@ -46,4 +46,4 @@ function theme_username(\$object) {
   return \$output;
 }
 
-$1
+$2

@@ -41,7 +41,7 @@
  * @return
  *   An HTML string representing the table.
  */
-function <?php print $basename; ?>_table(\$header, \$rows, \$attributes = array(), \$caption = NULL) {
+function ${1:phptemplate}_table(\$header, \$rows, \$attributes = array(), \$caption = NULL) {
 
   // Add sticky headers, if applicable.
   if (count(\$header)) {
@@ -123,4 +123,4 @@ function <?php print $basename; ?>_table(\$header, \$rows, \$attributes = array(
   return \$output;
 }
 
-$1
+$2

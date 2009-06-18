@@ -6,7 +6,7 @@
  * @return
  *   A string containing the themed blocks for this region.
  */
-function ${1:<?php print $basename; ?>}_blocks(\$region) {
+function ${1:phptemplate}_blocks(\$region) {
   \$output = '';
 
   if (\$list = block_list(\$region)) {

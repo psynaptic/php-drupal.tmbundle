@@ -8,7 +8,7 @@
  * @return
  *   A string containing an unordered list of links.
  */
-function <?php print $basename; ?>_links(\$links, \$attributes = array('class' => 'links')) {
+function ${1:phptemplate}_links(\$links, \$attributes = array('class' => 'links')) {
   \$output = '';
 
   if (count(\$links) > 0) {
@@ -68,4 +68,4 @@ function <?php print $basename; ?>_links(\$links, \$attributes = array('class' =
   return \$output;
 }
 
-$1
+$2
