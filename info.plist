@@ -22,6 +22,7 @@
 			<string>A06188ED-D5AB-4F87-A002-3CCF8340574E</string>
 			<string>20C93839-F089-4DAB-8117-0687CA664EAE</string>
 			<string>66F7C1A7-9E87-41F4-9E76-F936988BA5A1</string>
+			<string>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</string>
 			<string>422C6E4D-43E6-445D-80F7-BA660A7BB46F</string>
 			<string>5F0E71DA-6D1D-4AFB-A396-31C650F6B313</string>
 		</array>
@@ -138,6 +139,21 @@
 				<key>name</key>
 				<string>Hooks</string>
 			</dict>
+			<key>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>2D68121F-1F71-4CC0-B88A-58200D14E5B2</string>
+					<string>21DEC0E0-524A-4BB5-A8D1-7344C01EDE07</string>
+					<string>B49574BA-CE5D-466F-B78C-65E9AD56CAE0</string>
+					<string>306463FA-E47E-4E7B-9692-9A8B4C0DF7FE</string>
+					<string>F854F034-ED37-4B85-9156-3BD613D85FC1</string>
+					<string>2A5C8D32-02DA-4833-AA72-B4D2E5875F89</string>
+					<string>1747B3D9-4421-487F-919D-B0BDAD742449</string>
+				</array>
+				<key>name</key>
+				<string>Theme</string>
+			</dict>
 			<key>ED0C287E-DF41-4382-8AE7-492BDCACFEE8</key>
 			<dict>
 				<key>items</key>
@@ -206,6 +222,8 @@
 		<string>E8112C93-BC0A-4989-B301-76E0D76F1068</string>
 		<string>2D68121F-1F71-4CC0-B88A-58200D14E5B2</string>
 		<string>21DEC0E0-524A-4BB5-A8D1-7344C01EDE07</string>
+		<string>B49574BA-CE5D-466F-B78C-65E9AD56CAE0</string>
+		<string>306463FA-E47E-4E7B-9692-9A8B4C0DF7FE</string>
 		<string>F2A150DB-7C27-4FCE-84DF-15C9E57125D1</string>
 		<string>8D89DCB1-6B18-4A17-88B7-62A40BAC607B</string>
 		<string>A966FACE-FB62-4DB2-A698-F44C7991CDE1</string>
@@ -214,6 +232,9 @@
 		<string>FC9007C9-418B-4FD0-B6A2-ABCA640C62F9</string>
 		<string>30FD2CDB-CAFB-4FC0-A13B-5582C2400AD6</string>
 		<string>8AC8D649-45D4-4C6B-98F5-5AEA1C51186D</string>
+		<string>F854F034-ED37-4B85-9156-3BD613D85FC1</string>
+		<string>2A5C8D32-02DA-4833-AA72-B4D2E5875F89</string>
+		<string>1747B3D9-4421-487F-919D-B0BDAD742449</string>
 		<string>66FFAFCE-0A11-470B-93F3-D3C20CC5D1F5</string>
 		<string>81FF9167-D616-4457-9A45-8CAD124B38FF</string>
 		<string>871EBE12-E7C0-46C5-A3B0-B56A999B373E</string>

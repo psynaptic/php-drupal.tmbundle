@@ -9,13 +9,30 @@ function textmate_find_command($name) {
   global $version;
 
   if (!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) {
-    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/not_installed_properly.php";
+    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/error/not_installed_properly.php";
+  }
+
+  if (strpos($name, 'theme_') === 0) {
+    $folder = 'theme/';
+  }
+
+  if (strpos($name, 'hook_') === 0) {
+    $folder = 'hooks/';
+  }
+
+  if (strpos($name, '#') === 0) {
+    $folder = 'fapi/elements/';
+  }
+
+  if (strpos($name, 'fapi_') === 0) {
+    $folder = 'fapi/controls/';
+    $name = str_replace('fapi_', '', $name);
   }
 
   $files = array(
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$name.$version.php",
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$name.php",
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/does_not_exist.php",
+    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.$version.php",
+    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.php",
+    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/error/does_not_exist.php",
   );
 
   foreach ($files as $file)
