@@ -9,31 +9,31 @@ function textmate_find_command($name) {
   global $version;
 
   if (!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) {
-    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/error/not_installed_properly.php";
+    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/not_installed_properly.php";
   }
 
   if (strpos($name, 'theme_') === 0) {
     $folder = 'theme/';
   }
 
-  if (strpos($name, 'hook_') === 0) {
+  elseif (strpos($name, 'hook_') === 0) {
     $folder = 'hooks/';
   }
 
-  if (strpos($name, 'element_') === 0) {
+  elseif (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
     $name = str_replace('element_', '', $name);
   }
 
-  if (strpos($name, 'fapi_') === 0) {
+  elseif (strpos($name, 'fapi_') === 0) {
     $folder = 'fapi/controls/';
     $name = str_replace('fapi_', '', $name);
   }
 
-  $files = array(
+  $files = array(    
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.$version.php",
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.php",
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/error/does_not_exist.php",
+    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/does_not_exist.php",
   );
 
   foreach ($files as $file)
@@ -61,9 +61,7 @@ function textmate_detect_drupal_version() {
       array_pop($path);
     }
   }
-  else {
-    return $_ENV['TM_DRUPAL_VERSION'];
-  }
+  return $_ENV['TM_DRUPAL_VERSION'];
 }
 
 function textmate_parse_info_file($filename) {
