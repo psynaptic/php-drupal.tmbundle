@@ -11,7 +11,7 @@
 $document = file_get_contents('php://stdin');
 $text = getenv('TM_SELECTED_TEXT');
 
-preg_match_all('@\$\{([0-9]+)\:@', $document, $matches);
+preg_match_all('@\$\{?([0-9]+)\:?@', $document, $matches);
 
 if ($matches[1]) {
   array_shift($matches);
