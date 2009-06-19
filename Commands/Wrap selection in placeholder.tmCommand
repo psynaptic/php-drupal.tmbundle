@@ -12,9 +12,15 @@ $document = file_get_contents('php://stdin');
 $text = getenv('TM_SELECTED_TEXT');
 
 preg_match_all('@\$\{([0-9]+)\:@', $document, $matches);
-array_shift($matches);
-$last_id = max(array_values($matches[0]));
-$next_id = $last_id + 1;
+
+if ($matches[1]) {
+  array_shift($matches);
+  $last_id = max(array_values($matches[0]));
+  $next_id = $last_id + 1;
+}
+else {
+  $next_id = 1;
+}
 
 print '${' . $next_id . ':' . $text . '}';
 </string>
