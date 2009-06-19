@@ -27,7 +27,7 @@ print '${' . $next_id . ':' . $text . '}';
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>text.html.basic, source.php</string>
+	<string>text.html.basic, text.plain</string>
 	<key>uuid</key>
 	<string>085F5C13-3AAF-4454-9D74-731FB3759DA8</string>
 </dict>
