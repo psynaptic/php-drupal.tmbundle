@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+
+$document = file_get_contents('php://stdin');
+$text = getenv('TM_SELECTED_TEXT');
+
+preg_match_all('@\$\{([0-9]+)\:@', $document, $matches);
+array_shift($matches);
+$last_id = max(array_values($matches[0]));
+$next_id = $last_id + 1;
+
+print '${' . $next_id . ':' . $text . '}';
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>@N</string>
+	<key>name</key>
+	<string>Wrap selection in placeholder</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.html.basic, source.php</string>
+	<key>uuid</key>
+	<string>085F5C13-3AAF-4454-9D74-731FB3759DA8</string>
+</dict>
+</plist>
