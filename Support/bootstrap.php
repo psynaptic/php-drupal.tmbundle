@@ -20,6 +20,10 @@ function textmate_find_command($name) {
     $folder = 'hooks/';
   }
 
+  elseif (strpos($name, 'drupal_') === 0) {
+    $folder = 'drupal/';
+  }
+
   elseif (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
     $name = str_replace('element_', '', $name);

@@ -16,6 +16,7 @@
 	<dict>
 		<key>items</key>
 		<array>
+			<string>237BC8E2-FB96-475D-BA41-EBA23F6D9947</string>
 			<string>ED0C287E-DF41-4382-8AE7-492BDCACFEE8</string>
 			<string>67366DAF-14EE-4A46-AD4A-4E15FF488B47</string>
 			<string>70F554D4-EA11-4535-9E76-97367CA8BFAA</string>
@@ -37,6 +38,15 @@
 				</array>
 				<key>name</key>
 				<string>Menu</string>
+			</dict>
+			<key>237BC8E2-FB96-475D-BA41-EBA23F6D9947</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>EB427B02-EFF5-4CC6-BC0D-BE08D2E3E8C9</string>
+				</array>
+				<key>name</key>
+				<string>Common</string>
 			</dict>
 			<key>66F7C1A7-9E87-41F4-9E76-F936988BA5A1</key>
 			<dict>
@@ -142,6 +152,7 @@
 					<string>66FFAFCE-0A11-470B-93F3-D3C20CC5D1F5</string>
 					<string>FC9007C9-418B-4FD0-B6A2-ABCA640C62F9</string>
 					<string>81FF9167-D616-4457-9A45-8CAD124B38FF</string>
+					<string>371A833F-DA49-4172-B033-E064F6B57C46</string>
 				</array>
 				<key>name</key>
 				<string>Hooks</string>
@@ -364,6 +375,8 @@
 		<string>8AC8D649-45D4-4C6B-98F5-5AEA1C51186D</string>
 		<string>66FFAFCE-0A11-470B-93F3-D3C20CC5D1F5</string>
 		<string>81FF9167-D616-4457-9A45-8CAD124B38FF</string>
+		<string>371A833F-DA49-4172-B033-E064F6B57C46</string>
+		<string>EB427B02-EFF5-4CC6-BC0D-BE08D2E3E8C9</string>
 		<string>871EBE12-E7C0-46C5-A3B0-B56A999B373E</string>
 		<string>AC4889D0-71AE-42EF-8EEE-C737403A59ED</string>
 		<string>422C6E4D-43E6-445D-80F7-BA660A7BB46F</string>
