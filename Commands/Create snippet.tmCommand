@@ -15,12 +15,12 @@ $replace = array('\$', '\`');
 $document = str_replace($search, $replace, $document);
 
 if (strpos($document, '/**') !== 0) {
-  preg_match('@\s(hook_[a-z_]*)@i', $document, $matches);
-  if (strpos($matches[1], 'hook_') === 0) {
+  preg_match('@\s([hook_|theme_][a-z_]*)@i', $document, $matches);
+  if (is_array($matches) &amp;&amp; $matches &amp;&amp; strpos($matches[1], 'hook_') === 0) {
     $output = "/**\n * Implementation of $matches[1]().\n */\n";
   }
   else {
-    $output = "/**\n * $1\n */\n";
+    $output = "/**\n * $matches[1]().\n */\n";
   }
 }
 
