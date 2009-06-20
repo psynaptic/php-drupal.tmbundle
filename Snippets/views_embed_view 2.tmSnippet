@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>views_embed_view(${1:\$name}, ${2:\$display_id = 'default'});</string>
+	<key>name</key>
+	<string>views_embed_view</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>v</string>
+	<key>uuid</key>
+	<string>5883A085-C799-4E50-843A-3030522C14C8</string>
+</dict>
+</plist>
