@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php print l('${1:Text}', '${2:path}'${3:, array(${4:${5:'html' =&gt; TRUE, }${6:'attributes' =&gt; array(${7:'class' =&gt; '${8:link-class}'})}})}); ?&gt;</string>
+	<key>name</key>
+	<string>l</string>
+	<key>scope</key>
+	<string>text.html.basic</string>
+	<key>tabTrigger</key>
+	<string>l</string>
+	<key>uuid</key>
+	<string>4C6B4BDD-BEE3-468E-BDD1-51F984454ED3</string>
+</dict>
+</plist>

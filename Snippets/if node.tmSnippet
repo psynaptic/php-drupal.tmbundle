@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>if (arg(0) == 'node' &amp;&amp; is_numeric(arg(1)) &amp;&amp; arg(2) == '') {
+  $1
+}</string>
+	<key>name</key>
+	<string>if node</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>ifnode</string>
+	<key>uuid</key>
+	<string>C4854A96-D8D8-4D5E-99D3-8B28ADC613E6</string>
+</dict>
+</plist>

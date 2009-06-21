@@ -23,6 +23,7 @@
 			<string>A06188ED-D5AB-4F87-A002-3CCF8340574E</string>
 			<string>20C93839-F089-4DAB-8117-0687CA664EAE</string>
 			<string>66F7C1A7-9E87-41F4-9E76-F936988BA5A1</string>
+			<string>B2CCB76A-9DC5-438D-BE8F-DBA723959249</string>
 			<string>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</string>
 			<string>E02800F5-2766-438D-8E39-EF6A06E3EE76</string>
 			<string>422C6E4D-43E6-445D-80F7-BA660A7BB46F</string>
@@ -43,7 +44,10 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>4C6B4BDD-BEE3-468E-BDD1-51F984454ED3</string>
 					<string>EB427B02-EFF5-4CC6-BC0D-BE08D2E3E8C9</string>
+					<string>9432E962-8719-4869-8045-6EC91AECB1E0</string>
+					<string>C4854A96-D8D8-4D5E-99D3-8B28ADC613E6</string>
 				</array>
 				<key>name</key>
 				<string>Common</string>
@@ -156,6 +160,16 @@
 				</array>
 				<key>name</key>
 				<string>Hooks</string>
+			</dict>
+			<key>B2CCB76A-9DC5-438D-BE8F-DBA723959249</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>37984F52-C428-4158-82FD-EEE312AA6405</string>
+					<string>4180D888-3502-4B51-9F5D-B2631DD01D3F</string>
+				</array>
+				<key>name</key>
+				<string>Proprocess</string>
 			</dict>
 			<key>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</key>
 			<dict>
@@ -376,6 +390,8 @@
 		<string>66FFAFCE-0A11-470B-93F3-D3C20CC5D1F5</string>
 		<string>81FF9167-D616-4457-9A45-8CAD124B38FF</string>
 		<string>371A833F-DA49-4172-B033-E064F6B57C46</string>
+		<string>37984F52-C428-4158-82FD-EEE312AA6405</string>
+		<string>4180D888-3502-4B51-9F5D-B2631DD01D3F</string>
 		<string>EB427B02-EFF5-4CC6-BC0D-BE08D2E3E8C9</string>
 		<string>871EBE12-E7C0-46C5-A3B0-B56A999B373E</string>
 		<string>AC4889D0-71AE-42EF-8EEE-C737403A59ED</string>
@@ -403,6 +419,9 @@
 		<string>A97613F6-D7F8-4ADB-A480-79F88A8BFA6A</string>
 		<string>499E3832-1044-4589-BC9A-2642AEF0121C</string>
 		<string>6F90D9BB-C4E0-4B45-B236-693A0808EFF3</string>
+		<string>4C6B4BDD-BEE3-468E-BDD1-51F984454ED3</string>
+		<string>9432E962-8719-4869-8045-6EC91AECB1E0</string>
+		<string>C4854A96-D8D8-4D5E-99D3-8B28ADC613E6</string>
 		<string>DAC597AC-2BCE-45E6-9DEF-E67150445F6F</string>
 		<string>085F5C13-3AAF-4454-9D74-731FB3759DA8</string>
 		<string>33463854-3B9E-4DF0-9D8A-B2736BB0E78E</string>

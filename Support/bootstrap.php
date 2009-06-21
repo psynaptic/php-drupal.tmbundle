@@ -24,6 +24,10 @@ function textmate_find_command($name) {
     $folder = 'drupal/';
   }
 
+  elseif (strpos($name, 'template_preprocess_') === 0) {
+    $folder = 'preprocess/';
+  }
+
   elseif (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
     $name = str_replace('element_', '', $name);
