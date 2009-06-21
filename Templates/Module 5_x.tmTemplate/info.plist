@@ -13,13 +13,11 @@ if [[ ! (-f $TM_NEW_FILE || -f $TM_INFO_FILE) ]]; then
 fi</string>
 	<key>extension</key>
 	<string>module</string>
-	<key>files</key>
-	<string>printf "$TM_NEW_FILE\n$TM_NEW_FILE_DIRECTORY/$TM_NEW_FILE_BASENAME.info"</string>
 	<key>name</key>
-	<string>Module 6.x</string>
+	<string>Module 5.x</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>uuid</key>
-	<string>97DB980D-9DAD-4DF7-A889-4DAEDF966049</string>
+	<string>D9A0C863-3B26-4D22-9FA4-AD93A46A3ED5</string>
 </dict>
 </plist>

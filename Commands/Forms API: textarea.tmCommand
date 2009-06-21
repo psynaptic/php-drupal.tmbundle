@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-include textmate_find_command('textarea');
+include textmate_find_command('fapi_textarea');
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -19,7 +19,7 @@ include textmate_find_command('textarea');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>textarea</string>
+	<string>fapi</string>
 	<key>uuid</key>
 	<string>C4FB1BF9-96A5-406F-BD5B-A6EA9C3DC4CC</string>
 </dict>

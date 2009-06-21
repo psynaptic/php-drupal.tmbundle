@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-include textmate_find_command('file');
+include textmate_find_command('fapi_file');
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -19,7 +19,7 @@ include textmate_find_command('file');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>file</string>
+	<string>fapi</string>
 	<key>uuid</key>
 	<string>B37BF3E3-1695-411A-B2E8-EC052196F714</string>
 </dict>

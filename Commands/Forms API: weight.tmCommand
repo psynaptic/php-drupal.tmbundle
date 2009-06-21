@@ -8,7 +8,7 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-include textmate_find_command('weight');
+include textmate_find_command('fapi_weight');
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -19,7 +19,7 @@ include textmate_find_command('weight');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>weight</string>
+	<string>fapi</string>
 	<key>uuid</key>
 	<string>90E1482D-0059-40D8-9D40-BF437751FC2B</string>
 </dict>
