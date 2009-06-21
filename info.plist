@@ -16,13 +16,13 @@
 	<dict>
 		<key>items</key>
 		<array>
+			<string>66F7C1A7-9E87-41F4-9E76-F936988BA5A1</string>
 			<string>237BC8E2-FB96-475D-BA41-EBA23F6D9947</string>
 			<string>ED0C287E-DF41-4382-8AE7-492BDCACFEE8</string>
 			<string>67366DAF-14EE-4A46-AD4A-4E15FF488B47</string>
 			<string>70F554D4-EA11-4535-9E76-97367CA8BFAA</string>
 			<string>A06188ED-D5AB-4F87-A002-3CCF8340574E</string>
 			<string>20C93839-F089-4DAB-8117-0687CA664EAE</string>
-			<string>66F7C1A7-9E87-41F4-9E76-F936988BA5A1</string>
 			<string>B2CCB76A-9DC5-438D-BE8F-DBA723959249</string>
 			<string>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</string>
 			<string>E02800F5-2766-438D-8E39-EF6A06E3EE76</string>
@@ -61,7 +61,7 @@
 					<string>33463854-3B9E-4DF0-9D8A-B2736BB0E78E</string>
 				</array>
 				<key>name</key>
-				<string>Misc</string>
+				<string>Bundle tools</string>
 			</dict>
 			<key>67366DAF-14EE-4A46-AD4A-4E15FF488B47</key>
 			<dict>
@@ -165,8 +165,9 @@
 			<dict>
 				<key>items</key>
 				<array>
-					<string>37984F52-C428-4158-82FD-EEE312AA6405</string>
+					<string>C036851E-6C70-4BFC-8F12-ACE28768026F</string>
 					<string>4180D888-3502-4B51-9F5D-B2631DD01D3F</string>
+					<string>37984F52-C428-4158-82FD-EEE312AA6405</string>
 				</array>
 				<key>name</key>
 				<string>Proprocess</string>
@@ -392,6 +393,7 @@
 		<string>371A833F-DA49-4172-B033-E064F6B57C46</string>
 		<string>37984F52-C428-4158-82FD-EEE312AA6405</string>
 		<string>4180D888-3502-4B51-9F5D-B2631DD01D3F</string>
+		<string>C036851E-6C70-4BFC-8F12-ACE28768026F</string>
 		<string>EB427B02-EFF5-4CC6-BC0D-BE08D2E3E8C9</string>
 		<string>871EBE12-E7C0-46C5-A3B0-B56A999B373E</string>
 		<string>AC4889D0-71AE-42EF-8EEE-C737403A59ED</string>
