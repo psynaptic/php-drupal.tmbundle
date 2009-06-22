@@ -1,8 +1,8 @@
-array(
-  'title' => '${1:Page title}',
-  'description' => '${2:Your description goes here.}',
-  'access arguments' => ${3:array('${4:administer <?php print $basename; ?>}')},
-  'page callback' => '${5:drupal_get_form}',
-  'page arguments' => array('${6:<?php print $basename; ?>_settings}'),$7
+\$items['${1:admin/settings/<?php print $basename; ?>}'] = array(
+  'title' => '${2:Menu item}',
+  'description' => '${3:The description of the menu item. It is used as title attribute and on the administration overview page.}',
+  'page arguments' => array(${4:'form_id'}),
+  'access arguments' => array('${5:administer <?php print $basename; ?>}'),
+  ${6:// Further settings: 'page callback', 'access callback', 'file', 'type'.
+  // For more, see http://api.drupal.org/api/function/hook_menu/6}
 );
-$8

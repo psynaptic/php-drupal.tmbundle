@@ -1,1 +1,1 @@
-The PHP Drupal Bundle is not installed properly. Press âŒƒ H for instructions.
+The PHP Drupal Bundle is not installed properly. Press ⌃H for instructions.

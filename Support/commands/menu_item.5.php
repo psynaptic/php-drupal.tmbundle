@@ -1,8 +1,10 @@
-array(
-  'title' => t('${1:Page title}'),
-  'description' => t('${2:Your description goes here.}'),
-  'access' => ${3:user_access('${4:administer <?php print $basename; ?>}')},
-  'callback' => '${5:drupal_get_form}',
-  'callback arguments' => array('${6:<?php print $basename; ?>_settings}'),$7
+\$items[] = array(
+  'path' => '${1:admin/settings/<?php print $basename; ?>}',
+  'title' => t('${2:Menu item}'),
+  'description' => t('${3:The description of the menu item. It is used as title attribute and on the administration overview page.}'),
+  'callback' => '${4:drupal_get_form}',
+  'callback arguments' => array($5),
+  'access' => user_access('${6:administer <?php print $basename; ?>}$7'),
+  'type' => ${8:MENU_NORMAL_ITEM},$9
 );
-$8
+$10

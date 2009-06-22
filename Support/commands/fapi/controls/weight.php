@@ -1,4 +1,4 @@
-array(
+\$form['${1/(\w+)| /(?1:\l$0:-)/g}'] = array(
   '#type' => 'weight',
   '#title' => t('${1:Weight}'),
   '#description' => t('${3:The weight defines the order of the element.}'),
