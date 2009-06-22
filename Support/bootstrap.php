@@ -24,6 +24,10 @@ function textmate_find_command($name) {
     $folder = 'drupal/';
   }
 
+  elseif (strpos($name, 'content_') === 0) {
+    $folder = 'cck/';
+  }
+
   elseif (strpos($name, 'template_preprocess_') === 0) {
     $folder = 'preprocess/';
   }
