@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php print l('${1:Text}', '${2:path}', array('html' =&gt; TRUE${3:, 'attributes' =&gt; array('class' =&gt; '${4:link-class}'$5)$6})); ?&gt;$0</string>
+	<string>l(t('${1:Text}'), '${2:path}', array('absolute' =&gt; TRUE$0));$0</string>
 	<key>name</key>
-	<string>l() html</string>
+	<string>l() absolute</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>source.php</string>
 	<key>tabTrigger</key>
 	<string>l</string>
 	<key>uuid</key>
-	<string>4C6B4BDD-BEE3-468E-BDD1-51F984454ED3</string>
+	<string>480293B5-F10A-4D35-9E4F-2AFEE8A07FE5</string>
 </dict>
 </plist>

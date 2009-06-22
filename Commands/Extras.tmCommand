@@ -8,19 +8,19 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-include textmate_find_command('fapi_submit');
+include textmate_find_command('content_extras');
 </string>
 	<key>input</key>
 	<string>none</string>
 	<key>name</key>
-	<string>submit</string>
+	<string>Extras</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>$form</string>
+	<string>cck</string>
 	<key>uuid</key>
-	<string>66BC220B-A804-452A-9710-CD34AF8E2D3C</string>
+	<string>50586E1C-DBE3-4174-B0E9-04B5B784250E</string>
 </dict>
 </plist>

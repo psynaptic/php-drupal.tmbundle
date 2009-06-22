@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print t('$TM_SELECTED_TEXT'); ?&gt;</string>
 	<key>keyEquivalent</key>
-	<string>@t</string>
+	<string>~@L</string>
 	<key>name</key>
 	<string>t</string>
 	<key>scope</key>

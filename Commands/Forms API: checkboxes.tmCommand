@@ -19,7 +19,7 @@ include textmate_find_command('fapi_checkboxes');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>fapi</string>
+	<string>$form</string>
 	<key>uuid</key>
 	<string>661681EB-D29C-47F1-9C9D-8E34B01E6DA6</string>
 </dict>

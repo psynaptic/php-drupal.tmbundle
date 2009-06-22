@@ -19,7 +19,7 @@ include textmate_find_command('fapi_radios');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>fapi</string>
+	<string>$form</string>
 	<key>uuid</key>
 	<string>A1CA9B76-7969-4045-8578-B04DE439F0E6</string>
 </dict>

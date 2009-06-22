@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>${TM_SELECTED_TEXT/^(['|"])?(.*?)(['|"])?$/t((?1:$1:")$2(?1:$1:"));/m}</string>
-	<key>keyEquivalent</key>
-	<string>~@L</string>
+	<string>variable_set(${1:'${2:variable}'}, ${3:\$${4:value}})</string>
 	<key>name</key>
-	<string>t</string>
+	<string>variable_set</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>t</string>
+	<string>var</string>
 	<key>uuid</key>
-	<string>DB4E1981-DF8B-4AF9-B4B2-A5917A68B25C</string>
+	<string>0F8A29B8-A381-4AC2-A50D-9B0B73D3503D</string>
 </dict>
 </plist>

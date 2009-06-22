@@ -19,7 +19,7 @@ include textmate_find_command('fapi_select');
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
-	<string>fapi</string>
+	<string>$form</string>
 	<key>uuid</key>
 	<string>E0FCEE2E-8DAD-4503-A426-AF6D35BF1A34</string>
 </dict>
