@@ -35,7 +35,7 @@ function <?php print $basename; ?>_block(\$op = 'list', \$delta = 0, \$edit = ar
       ${12:if (\$delta == 1) {
         \$block['subject'] = t('<?php print ucfirst($basename); ?> block 2 title');
         \$block['content'] = t('<?php print ucfirst($basename); ?> block 2 content');
-      }
+      \}
 }
       return \$block;
   }    
