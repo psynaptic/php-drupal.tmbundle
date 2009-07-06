@@ -1,4 +1,4 @@
-\$form['${1/(\w+)| /(?1:\l$0:-)/g}'] = array(
+\$form['${1/(\w+)| /(?1:\l$0:_)/g}'] = array(
   '#type' => 'checkboxes',
   '#title' => t('${1:Options}'),
   '#description' => t('${2:The description appears usually below the checkboxes.}'),

@@ -1,4 +1,4 @@
-\$form['${1/(\w+)| /(?1:\l$0:-)/g}'] = array(
+\$form['${1/(\w+)| /(?1:\l$0:_)/g}'] = array(
   '#type' => 'select',
   '#title' => t('${1:Select}'),
   ${2:'#multiple' => TRUE,
