@@ -32,6 +32,10 @@ function textmate_find_command($name) {
     $folder = 'preprocess/';
   }
 
+  elseif (strpos($name, 'test_') === 0) {
+    $folder = 'simpletest/';
+  }
+  
   elseif (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
     $name = str_replace('element_', '', $name);

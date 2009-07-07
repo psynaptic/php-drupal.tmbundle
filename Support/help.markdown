@@ -8,13 +8,17 @@ The PHP Drupal bundle provides Drupal developers with shortcuts for creating Dru
 - Drupal 5 and 6 supported
 - All FAPI controls and elements
 - Menu items
+- Theme functions
 - Some commonly used hooks
+- CCK content types
+- Preprocess functions
+- Simpletest skeleton
 
 Planned features...
 
-- Theme functions
-- Template files
+- More theme functions
 - More hooks
+- Template files
 
 # Installation
 
