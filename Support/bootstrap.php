@@ -45,6 +45,10 @@ function textmate_find_command($name) {
     $folder = 'fapi/controls/';
     $name = str_replace('fapi_', '', $name);
   }
+  
+  else {
+    $folder = '';
+  }
 
   $files = array(    
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.$version.php",

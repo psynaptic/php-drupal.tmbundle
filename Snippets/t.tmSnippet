@@ -7,7 +7,7 @@
 	<key>keyEquivalent</key>
 	<string>~@L</string>
 	<key>name</key>
-	<string>t</string>
+	<string>Wrap in t()</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>
