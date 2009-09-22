@@ -11,9 +11,10 @@
     echo $output;
   fi
   `(&amp;\$vars) {
-  dpm(\$vars);
+  ${1:dpm(\$vars);}
 }
-</string>
+
+$0</string>
 	<key>keyEquivalent</key>
 	<string>~@V</string>
 	<key>name</key>
