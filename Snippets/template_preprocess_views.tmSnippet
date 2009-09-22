@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>function phptemplate_preprocess_`
+  if [[ $(pbpaste) ]]; then
+    paste=$(pbpaste);
+    replace=${paste//-/_};
+    output=${replace//.tpl.php/};
+    echo $output;
+  fi
+  `(&amp;\$vars) {
+  dpm(\$vars);
+}
+</string>
+	<key>keyEquivalent</key>
+	<string>~@V</string>
+	<key>name</key>
+	<string>template_preprocess_views</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>uuid</key>
+	<string>A6E4BA0D-8389-4EF0-A61D-DBF73111C7C0</string>
+</dict>
+</plist>
