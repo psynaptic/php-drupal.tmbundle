@@ -8,7 +8,7 @@ $basename = isset($_SERVER['TM_FILENAME']) ? preg_replace('/\..+$/', '', $_SERVE
 function textmate_find_command($name) {
   global $version;
 
-  if (!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) {
+  if ((!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
     return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/not_installed_properly.php";
   }
 
@@ -80,6 +80,9 @@ function textmate_detect_drupal_version() {
       }
       array_pop($path);
     }
+  }
+  if (empty($_ENV['TM_DRUPAL_VERSION'])) {
+    return $_SERVER['TM_DRUPAL_VERSION'];
   }
   return $_ENV['TM_DRUPAL_VERSION'];
 }
