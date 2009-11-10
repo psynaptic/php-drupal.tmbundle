@@ -18,7 +18,7 @@ $0</string>
 	<key>keyEquivalent</key>
 	<string>~@V</string>
 	<key>name</key>
-	<string>template_preprocess_views</string>
+	<string>Convert views template filename to preprocess</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>uuid</key>
