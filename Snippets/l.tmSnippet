@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l('${1:Text}', '${2:path}', array('html' =&gt; TRUE${3:, 'attributes' =&gt; array('class' =&gt; '${4:link-class}'$5)$6})); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() html</string>
+	<string>&lt;?php l() html</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

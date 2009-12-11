@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php vpr_trace(); ?&gt;</string>
 	<key>name</key>
-	<string>vpr_trace</string>
+	<string>&lt;?php pr_trace</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

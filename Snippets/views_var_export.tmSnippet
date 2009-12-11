@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php views_var_export(${1:\$var}, ${2:\$prefix = ''}); ?&gt;</string>
 	<key>name</key>
-	<string>views_var_export</string>
+	<string>&lt;?php views_var_export</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php dvr(${1:\$${2:node}}); ?&gt;</string>
 	<key>name</key>
-	<string>dvr</string>
+	<string>&lt;?php dvr</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

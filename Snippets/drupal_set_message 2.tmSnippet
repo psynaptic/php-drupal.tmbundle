@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php drupal_set_message(${1:t('${2:Message}')}); ?&gt;</string>
 	<key>name</key>
-	<string>drupal_set_message</string>
+	<string>&lt;?php drupal_set_message</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

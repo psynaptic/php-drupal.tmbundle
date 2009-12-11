@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php views_trace(); ?&gt;</string>
 	<key>name</key>
-	<string>views_trace</string>
+	<string>&lt;?php views_trace</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

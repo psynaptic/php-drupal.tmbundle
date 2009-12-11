@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php dpr(${1:\$${2:node}}); ?&gt;</string>
 	<key>name</key>
-	<string>dpr</string>
+	<string>&lt;?php dpr</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

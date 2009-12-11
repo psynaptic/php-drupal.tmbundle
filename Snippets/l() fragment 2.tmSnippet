@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(t('${1:Text}'), '${2:path}', array('fragment' =&gt; '${3:fragment}'$4)$5); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() fragment</string>
+	<string>&lt;?php l() fragment</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

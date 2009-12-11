@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php dpm(${1:\$${2:node}}); ?&gt;</string>
 	<key>name</key>
-	<string>dpm</string>
+	<string>&lt;?php dpm</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php dvm(${1:\$${2:node}}); ?&gt;</string>
 	<key>name</key>
-	<string>dvm</string>
+	<string>&lt;?php dvm</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

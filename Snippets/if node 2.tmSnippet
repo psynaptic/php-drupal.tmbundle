@@ -7,7 +7,7 @@
   $1
 &lt;?php endif; ?&gt;</string>
 	<key>name</key>
-	<string>if node</string>
+	<string>&lt;?php if node</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

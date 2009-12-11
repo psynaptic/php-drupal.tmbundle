@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print views_embed_view(${1:\$name}, ${2:\$display_id = 'default'}); ?&gt;</string>
 	<key>name</key>
-	<string>views_embed_view</string>
+	<string>&lt;?php views_embed_view</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

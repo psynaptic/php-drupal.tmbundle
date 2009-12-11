@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(t('${1:Text}'), 'node/' . \$node-&gt;nid${2:, 'attributes' =&gt; array(${3:'class' =&gt; '${4:node-link}'})}); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() node</string>
+	<string>&lt;?php l() node</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

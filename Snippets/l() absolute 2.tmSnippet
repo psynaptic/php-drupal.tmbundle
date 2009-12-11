@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(t('${1:Text}'), '${2:path}', array('absolute' =&gt; TRUE$0)); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() absolute</string>
+	<string>&lt;?php l() absolute</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

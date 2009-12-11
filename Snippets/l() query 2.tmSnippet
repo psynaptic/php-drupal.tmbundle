@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(t('${1:Text}'), '${2:path}', array('query' =&gt; ${3:array('${4:key}' =&gt; '${5:value}'$6)}$7)); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() query</string>
+	<string>&lt;?php l() query</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

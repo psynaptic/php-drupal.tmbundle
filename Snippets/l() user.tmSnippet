@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(${1:\$user-&gt;name}, 'user/' . \$user-&gt;uid${2:, 'attributes' =&gt; array(${3:'class' =&gt; '${4:user-link}'})}); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() user</string>
+	<string>&lt;?php l() user</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php print l(${1:\$${2:text}}, ${3:\$${4:path}}${5:, array($6)}); ?&gt;$0</string>
 	<key>name</key>
-	<string>l() variables</string>
+	<string>&lt;?php l() variables</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>

@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>&lt;?php vsm_trace(); ?&gt;</string>
 	<key>name</key>
-	<string>vsm_trace</string>
+	<string>&lt;?php vsm_trace</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>
