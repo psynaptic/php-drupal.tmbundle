@@ -4,21 +4,24 @@ The PHP Drupal bundle provides Drupal developers with shortcuts for creating Dru
 
 ## Features
 
+- FAPI controls and elements
+- Menu items
+- Theme functions (incomplete)
+- Hooks (incomplete)
+- Devel debugging functions (dpm, dpr, dvm, dvr)
+- Views debugging functions (vpr, views\_trace, views\_var_export, etc)
+- Useful snippets (if node, l(), t())
+- Simpletest
+- Preprocess functions
 - Automatic detection of Drupal version when .info file available
 - Drupal 5 and 6 supported
-- All FAPI controls and elements
-- Menu items
-- Theme functions
-- Some commonly used hooks
-- CCK content types
-- Preprocess functions
-- Simpletest skeleton
+- Snippet building commands - makes it easier to contribute more snippets!
 
 Planned features...
 
-- More theme functions
-- More hooks
-- Template files
+- Add more hooks
+- Add more theme functions
+- Default template files
 
 # Installation
 
