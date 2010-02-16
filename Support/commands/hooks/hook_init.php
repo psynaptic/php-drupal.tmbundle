@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_load().
+ * Implementation of hook_init().
  */
 function <?php print $basename; ?>_init() {
   $1
