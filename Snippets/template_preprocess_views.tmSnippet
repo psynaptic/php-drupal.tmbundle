@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function phptemplate_preprocess_`
+	<string>function ${1:phptemplate}_preprocess_`
   if [[ $(pbpaste) ]]; then
     paste=$(pbpaste);
     replace=${paste//-/_};
@@ -11,7 +11,7 @@
     echo $output;
   fi
   `(&amp;\$vars) {
-  ${1:dpm(\$vars);}
+  ${2:dpm(\$vars);}
 }
 
 $0</string>
