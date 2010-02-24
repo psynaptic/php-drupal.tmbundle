@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?php print \$fields['${1:field_name}']-&gt;${2:content}; ?&gt;
+$0</string>
+	<key>name</key>
+	<string>&lt;?php print $fields['field_name']-&gt;content</string>
+	<key>scope</key>
+	<string>text.html</string>
+	<key>tabTrigger</key>
+	<string>$fields</string>
+	<key>uuid</key>
+	<string>1AF994C6-28DA-4946-B314-525BE9A962B6</string>
+</dict>
+</plist>

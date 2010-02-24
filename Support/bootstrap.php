@@ -28,6 +28,10 @@ function textmate_find_command($name) {
     $folder = 'cck/';
   }
 
+  elseif (strpos($name, 'menu_') === 0) {
+    $folder = 'menu/';
+  }
+
   elseif (strpos($name, 'template_preprocess_') === 0) {
     $folder = 'preprocess/';
   }

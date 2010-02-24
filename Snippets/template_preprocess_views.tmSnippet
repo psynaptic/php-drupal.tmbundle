@@ -10,8 +10,8 @@
     output=${replace//.tpl.php/};
     echo $output;
   fi
-  `(&amp;\$vars) {
-  ${2:dpm(\$vars);}
+  `(&amp;\$variables) {
+  ${2:dpm(\$variables);}
 }
 
 $0</string>
