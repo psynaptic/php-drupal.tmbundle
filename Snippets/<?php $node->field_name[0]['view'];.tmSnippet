@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>\$node-&gt;field_${1:name}[0]['${2:view}'];$0</string>
+	<string>&lt;?php print \$node-&gt;field_${1:name}[0]['${2:view}']; ?&gt;$0</string>
 	<key>name</key>
-	<string>$node-&gt;field_name[0]['view'];</string>
+	<string>&lt;?php $node-&gt;field_name[0]['view'];</string>
 	<key>scope</key>
-	<string>source.php</string>
+	<string>text.html</string>
 	<key>tabTrigger</key>
 	<string>n</string>
 	<key>uuid</key>
-	<string>7EDC8F69-871C-46D6-B58D-2E8D3767EDC4</string>
+	<string>D4CB4F58-581F-4C36-964A-6C528300B254</string>
 </dict>
 </plist>

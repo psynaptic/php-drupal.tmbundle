@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php print \$fields['${1:field_name}']-&gt;${2:content}; ?&gt;
-$0</string>
+	<string>&lt;?php print \$fields['${1:field_name}']-&gt;${2:content}; ?&gt;$0</string>
 	<key>name</key>
 	<string>&lt;?php print $fields['field_name']-&gt;content</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php drupal_set_message(${1:t('${2:Message}')}); ?&gt;</string>
+	<string>&lt;?php drupal_set_message(${1:t('${2:Message}')}); ?&gt;$0</string>
 	<key>name</key>
 	<string>&lt;?php drupal_set_message</string>
 	<key>scope</key>
