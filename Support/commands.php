@@ -10,7 +10,7 @@ function textmate_execute_command($name) {
   }
   
   if ('template_preprocess_node' == $name) {
-    $folder = 'preproces/';
+    $folder = 'preprocess/';
   }
   
   $files = array(    
@@ -28,12 +28,13 @@ function textmate_execute_command($name) {
 }
 
 function textmate_detect_drupal_theme() {
-  if (isset($_server['TM_DIRECTORY'])) {
+  if (isset($_SERVER['TM_DIRECTORY'])) {
     // Try to find the .info file of the theme.
     $path = explode('/', $_SERVER['TM_DIRECTORY']);
     while (!empty($path) && empty($info_file)) {
       $info_file = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
     }
-    return basename($info_file);
+    $info = array_pop($info_file);
+    return $info->name;
   }
 }
