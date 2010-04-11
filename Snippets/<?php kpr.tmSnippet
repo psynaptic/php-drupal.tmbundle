@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php print t('$TM_SELECTED_TEXT'); ?&gt;</string>
-	<key>keyEquivalent</key>
-	<string>@L</string>
+	<string>&lt;?php kpr(${1:\$${2:node}}); ?&gt;</string>
 	<key>name</key>
-	<string>&lt;?php Wrap in t()</string>
+	<string>&lt;?php kpr</string>
 	<key>scope</key>
 	<string>text.html.basic</string>
 	<key>tabTrigger</key>
-	<string>t</string>
+	<string>k</string>
 	<key>uuid</key>
-	<string>262CA840-50DB-48EB-BBD6-BE694C1A3488</string>
+	<string>CB6C0E2C-2731-4166-B2F1-50AC6D789E64</string>
 </dict>
 </plist>
