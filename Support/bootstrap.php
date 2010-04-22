@@ -2,6 +2,7 @@
 
 $version = textmate_detect_drupal_version();
 $basename = isset($_SERVER['TM_FILENAME']) ? preg_replace('/\..+$/', '', $_SERVER['TM_FILENAME']) : 'module';
+$theme_name = textmate_detect_drupal_theme();
 
 //============================================================================
 
@@ -193,4 +194,16 @@ function textmate_scan_directory($dir, $mask, $options = array(), $depth = 0) {
   }
 
   return $files;
+}
+
+function textmate_detect_drupal_theme() {
+  if (isset($_SERVER['TM_DIRECTORY'])) {
+    // Try to find the .info file of the theme.
+    $path = explode('/', $_SERVER['TM_DIRECTORY']);
+    while (!empty($path) && empty($info_file)) {
+      $info_file = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
+    }
+    $info = array_pop($info_file);
+    return $info->name;
+  }
 }

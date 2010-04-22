@@ -4,7 +4,7 @@
  * @param \$variables
  *   An array of variables to pass to the theme template.
  */
-function ${1:phptemplate}_preprocess_page(&\$variables) {
+function <?php print $theme_name; ?>_preprocess_page(&\$variables) {
   $2
 }
 
