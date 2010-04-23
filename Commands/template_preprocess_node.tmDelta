@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>changed</key>
-	<dict/>
+	<dict>
+		<key>command</key>
+		<string>#!/usr/bin/env php
+&lt;?php
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('template_preprocess_node');
+</string>
+	</dict>
 	<key>deleted</key>
 	<array/>
 	<key>isDelta</key>
