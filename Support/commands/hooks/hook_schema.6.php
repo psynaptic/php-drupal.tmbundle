@@ -3,13 +3,9 @@
  */
 function <?php print $basename; ?>_schema() {
   \$schema = array();
-  \$schema[$1] = array(
-    'description' => '$2',
-    'fields' => array(
-      $3
-    ),
-  );
+  ${0:// Type '\$schema ⇥' to create a new database table schema.}
+  ${0:// Type '\$field ⇥' to create a new field in the table.}
   return \$schema;
 }
 
-$4
+$1

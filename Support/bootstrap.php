@@ -36,6 +36,11 @@ function textmate_find_command($name) {
   elseif (strpos($name, 'template_preprocess_') === 0) {
     $folder = 'preprocess/';
   }
+  
+  elseif (strpos($name, 'schema_') === 0) {
+    $folder = 'schema/';
+    $name = str_replace('schema_', '', $name);
+  }
 
   elseif (strpos($name, 'test_') === 0) {
     $folder = 'simpletest/';
