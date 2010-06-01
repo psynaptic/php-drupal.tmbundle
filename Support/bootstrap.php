@@ -2,7 +2,8 @@
 
 $version = textmate_detect_drupal_version();
 $basename = isset($_SERVER['TM_FILENAME']) ? preg_replace('/\..+$/', '', $_SERVER['TM_FILENAME']) : 'module';
-$theme_name = textmate_detect_drupal_theme();
+// TODO this breaks javascript scope for some reason.
+//$theme_name = textmate_detect_drupal_theme();
 
 //============================================================================
 
