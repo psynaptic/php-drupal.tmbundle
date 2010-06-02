@@ -10,14 +10,16 @@ function <?php print $basename; ?>_filter(\$op, \$delta = 0, \$format = -1, \$te
       return t('$2');
 
     case 'prepare':
-      $text = $3;
-      return $text;
+      \$text = $3;
+      return \$text;
 
     case "process":
-      $text = $4;
-      return $text;
+      \$text = $4;
+      return \$text;
 
     default:
-      return $text;
+      return \$text;
   }
 }
+
+$5
