@@ -11,10 +11,11 @@
     echo $output;
   fi
   `(&amp;\$variables) {
-  ${2:dpm(\$variables);}
-}
+  \$fields = \$variables['fields'];
 
-$0</string>
+  $0
+}
+</string>
 	<key>keyEquivalent</key>
 	<string>~@V</string>
 	<key>name</key>
