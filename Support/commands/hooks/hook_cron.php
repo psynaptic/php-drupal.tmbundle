@@ -1,8 +1,8 @@
 /**
  * Implements hook_cron().
  */
-function ${1:<?php print $basename; ?>}_cron() {
-  ${2:// Code goes here.}
+function <?php print $basename; ?>_cron() {
+  ${1:// Code goes here.}
 }
 
-$3
+$2

@@ -1,8 +1,8 @@
 /**
  * Implements hook_views_handlers().
  */
-function ${1:<?php print $basename; ?>}_views_handlers() {
-  ${2:// Code goes here.}  
+function <?php print $basename; ?>_views_handlers() {
+  ${1:// Code goes here.}  
 }
 
-$3
+$2

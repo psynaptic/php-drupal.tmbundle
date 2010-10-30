@@ -1,8 +1,8 @@
 /**
  * Implements hook_disable().
  */
-function ${1:<?php print $basename; ?>}_disable() {
-  ${2:// Code goes here.}
+function <?php print $basename; ?>_disable() {
+  ${1:// Code goes here.}
 }
 
-$3
+$2

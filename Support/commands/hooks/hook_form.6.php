@@ -1,7 +1,7 @@
 /**
  * Implements hook_form().
  */
-function ${1:<?php print $basename; ?>}_form(&\$node, \$form_state) {
+function <?php print $basename; ?>_form(&\$node, \$form_state) {
   $form = array();
   $type = node_get_types('type', $node);
   
@@ -14,4 +14,4 @@ function ${1:<?php print $basename; ?>}_form(&\$node, \$form_state) {
   return $form;
 }
 
-$2
+$1
