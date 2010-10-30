@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_access().
+ * Implements hook_access().
  */
 function <?php print $basename; ?>_access(\$op, \$node) {
   global \$user;

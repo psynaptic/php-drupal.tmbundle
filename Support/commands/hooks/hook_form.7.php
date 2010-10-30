@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_form().
+ * Implements hook_form().
  */
 function ${1:<?php print $basename; ?>}_form(\$node, &\$form_state) {
   $form = array();

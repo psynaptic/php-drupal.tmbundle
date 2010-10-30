@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_disable().
+ * Implements hook_disable().
  */
 function ${1:<?php print $basename; ?>}_disable() {
   ${2:// Code goes here.}

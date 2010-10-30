@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_block().
+ * Implements hook_block().
  */
 function <?php print $basename; ?>_block(\$op = 'list', \$delta = 0, \$edit = array()) {
   switch (\$op) {

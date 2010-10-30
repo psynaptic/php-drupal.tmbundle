@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_view().
+ * Implements hook_view().
  */
 function <?php print $basename; ?>_view(&\$node, \$teaser = FALSE, \$page = FALSE) {
   ${1:if (\$page) {

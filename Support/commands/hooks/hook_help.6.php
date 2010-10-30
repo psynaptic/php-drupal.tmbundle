@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_help().
+ * Implements hook_help().
  */
 function <?php print $basename; ?>_help(\$path, \$arg) {
   switch (\$path) {
