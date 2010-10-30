@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_menu().
+ * Implements hook_menu().
  */
 function <?php print $basename; ?>_menu(\$may_cache) {
   \$items = array();

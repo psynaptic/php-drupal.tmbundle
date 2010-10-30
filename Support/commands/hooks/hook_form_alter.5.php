@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_form_alter().
+ * Implements hook_form_alter().
  */
 function <?php print $basename; ?>_form_alter(\$form_id, &\$form) {${1:
   switch (\$form_id) {

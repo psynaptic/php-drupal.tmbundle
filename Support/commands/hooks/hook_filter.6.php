@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_filter().
+ * Implements hook_filter().
  */
 function <?php print $basename; ?>_filter(\$op, \$delta = 0, \$format = -1, \$text = '', \$cache_id = 0) {
   switch (\$op) {

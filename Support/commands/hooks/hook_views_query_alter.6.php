@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_query_alter().
+ * Implements hook_views_query_alter().
  */
 function ${1:<?php print $basename; ?>}_views_query_alter(&\$view, &\$query)) {
   switch (\$view->name) {

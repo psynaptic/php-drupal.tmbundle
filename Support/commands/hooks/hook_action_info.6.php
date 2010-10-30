@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_action_info().
+ * Implements hook_action_info().
  */
 function <?php print $basename; ?>_action_info() {
   \$info['${1:<?php print $basename; ?>_action}'] = array(

@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_pre_execute().
+ * Implements hook_views_pre_execute().
  */
 function ${1:<?php print $basename; ?>}_views_pre_execute(&\$view) {
   switch (\$view->name) {

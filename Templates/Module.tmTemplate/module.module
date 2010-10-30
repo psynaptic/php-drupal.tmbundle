@@ -11,7 +11,7 @@
  */
 
 /**
- * Implementation of hook_menu().
+ * Implements hook_menu().
  */
 function ${TM_NEW_FILE_BASENAME}_menu() {
   $items = array();

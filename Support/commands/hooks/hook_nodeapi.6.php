@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_nodeapi().
+ * Implements hook_nodeapi().
  */
 function <?php print $basename; ?>_nodeapi(&\$node, \$op, \$teaser = NULL, \$page = NULL) {
   switch (\$op) {${1:

@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_node_info().
+ * Implements hook_node_info().
  */
 function <?php print $basename; ?>_node_info() {
   return array(

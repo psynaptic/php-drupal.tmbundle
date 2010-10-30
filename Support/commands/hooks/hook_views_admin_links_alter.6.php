@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_admin_links_alter().
+ * Implements hook_views_admin_links_alter().
  */
 function <?php print $basename; ?>_views_admin_links_alter(&\$links, \$view) {${1:
   switch (\$view->name) {

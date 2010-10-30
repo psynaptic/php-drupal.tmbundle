@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_post_render().
+ * Implements hook_views_post_render().
  */
 function ${1:<?php print $basename; ?>}_views_post_render(&\$view, &\$output, &\$cache) {
   switch (\$view->name) {

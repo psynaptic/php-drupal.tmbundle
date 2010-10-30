@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_api().
+ * Implements hook_views_api().
  */
 function ${1:<?php print $basename; ?>}_views_api() {
   return array(

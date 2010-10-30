@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_forms().
+ * Implements hook_forms().
  */
 function <?php print $basename; ?>_forms() {
   ${1:\$forms['${2:<?php print $basename; ?>_form}'] = array(

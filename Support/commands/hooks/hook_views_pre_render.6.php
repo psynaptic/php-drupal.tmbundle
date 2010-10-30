@@ -1,5 +1,5 @@
 /**
- * Implementation of hook_views_pre_render().
+ * Implements hook_views_pre_render().
  */
 function ${1:<?php print $basename; ?>}_views_pre_view(&\$view) {
   switch (\$view->name) {
