@@ -1,8 +1,8 @@
 /**
  * Implementation of hook_init().
  */
-function <?php print $basename; ?>_init() {
-  $1
+function ${1:<?php print $basename; ?>}_init() {
+  ${2:// Code goes here.}
 }
 
-$0
+$3
