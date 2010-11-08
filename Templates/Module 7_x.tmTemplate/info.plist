@@ -16,10 +16,10 @@ fi</string>
   <key>files</key>
   <string>printf "$TM_NEW_FILE\n$TM_NEW_FILE_DIRECTORY/$TM_NEW_FILE_BASENAME.info"</string>
   <key>name</key>
-  <string>Module 5.x</string>
+  <string>Module 7.x</string>
   <key>scope</key>
   <string>source.php</string>
   <key>uuid</key>
-  <string>D9A0C863-3B26-4D22-9FA4-AD93A46A3ED5</string>
+  <string>7E149620-EADB-11DF-98CF-0800200C9A66</string>
 </dict>
 </plist>

@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>command</key>
-	<string>export TM_MODULE_TITLE=`perl &lt;&lt;&lt;$TM_NEW_FILE_BASENAME -pe 'y/_/ /; s/(?:^|\b)(.)/uc($1)/ge'`
+  <key>command</key>
+  <string>export TM_MODULE_TITLE=`perl &lt;&lt;&lt;$TM_NEW_FILE_BASENAME -pe 'y/_/ /; s/(?:^|\b)(.)/uc($1)/ge'`
 
 TM_INFO_FILE="$TM_NEW_FILE_DIRECTORY/$TM_NEW_FILE_BASENAME.info"
 
@@ -11,15 +11,15 @@ if [[ ! (-f $TM_NEW_FILE || -f $TM_INFO_FILE) ]]; then
    perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' &lt; module.module &gt; "$TM_NEW_FILE"
    perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' &lt; module.info &gt; "$TM_INFO_FILE"
 fi</string>
-	<key>extension</key>
-	<string>module</string>
-	<key>files</key>
-	<string>printf "$TM_NEW_FILE\n$TM_NEW_FILE_DIRECTORY/$TM_NEW_FILE_BASENAME.info"</string>
-	<key>name</key>
-	<string>Module 6.x</string>
-	<key>scope</key>
-	<string>source.php</string>
-	<key>uuid</key>
-	<string>97DB980D-9DAD-4DF7-A889-4DAEDF966049</string>
+  <key>extension</key>
+  <string>module</string>
+  <key>files</key>
+  <string>printf "$TM_NEW_FILE\n$TM_NEW_FILE_DIRECTORY/$TM_NEW_FILE_BASENAME.info"</string>
+  <key>name</key>
+  <string>Module 6.x</string>
+  <key>scope</key>
+  <string>source.php</string>
+  <key>uuid</key>
+  <string>97DB980D-9DAD-4DF7-A889-4DAEDF966049</string>
 </dict>
 </plist>

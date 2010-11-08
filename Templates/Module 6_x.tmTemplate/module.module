@@ -20,4 +20,3 @@ function ${TM_NEW_FILE_BASENAME}_menu() {
 
   return $items;
 }
-

@@ -13,14 +13,10 @@
 /**
  * Implements hook_menu().
  */
-function ${TM_NEW_FILE_BASENAME}_menu($may_cache) {
+function ${TM_NEW_FILE_BASENAME}_menu() {
   $items = array();
 
-  if ($may_cache) {
-    // Type '$item ⇥' to create a default menu item here.
-  }
-  else {
-    // Insert menu items specific to the current request here.
-  }
+  // Type '$item ⇥' to create a new menu item.
+
   return $items;
 }
