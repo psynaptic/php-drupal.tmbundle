@@ -10,7 +10,7 @@ function <?php print $basename; ?>_views_default_views() {
   \$files = file_scan_directory(drupal_get_path('module', '<?php print $basename; ?>') . '/views_default', '.inc');
   foreach (\$files as \$filepath => \$file) {
     include \$filepath;
-    if (isset($view)) {
+    if (isset(\$view)) {
       $views[\$view->name] = \$view;
     }
   }
