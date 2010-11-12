@@ -11,7 +11,7 @@ function <?php print $basename; ?>_views_default_views() {
   foreach (\$files as \$filepath => \$file) {
     include \$filepath;
     if (isset(\$view)) {
-      $views[\$view->name] = \$view;
+      \$views[\$view->name] = \$view;
     }
   }
   return \$views;
