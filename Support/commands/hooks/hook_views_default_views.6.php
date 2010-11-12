@@ -2,7 +2,7 @@
  * Implements hook_views_default_views().
  */
 function <?php print $basename; ?>_views_default_views() {
-  ${1:static \$views;
+  static \$views;
 
   if (isset(\$views)) {
     return \$views;
@@ -14,7 +14,7 @@ function <?php print $basename; ?>_views_default_views() {
       $views[\$view->name] = \$view;
     }
   }
-  return \$views;}
+  return \$views;
 }
 
-$2
+$1
