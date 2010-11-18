@@ -5,7 +5,7 @@ description = "The description of this module"
 ; Core version (required)
 core = 6.x
 
-; Package name (see http://drupal.org/node/101009 for a list of names)
+; Package name (see http://drupal.org/node/231036 for a list of names)
 ; package = 
 
 ; PHP version requirement (optional)

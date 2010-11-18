@@ -1,0 +1,30 @@
+; $Id$
+name = ${TM_MODULE_TITLE}
+description = "The description of this module"
+
+; Core version (required)
+core = 7.x
+
+; Package name (see http://drupal.org/node/542202 for a list of names)
+; package = 
+
+; PHP version requirement (optional)
+; php = 5.2
+
+; Loadable code files
+files[] = ${TM_NEW_FILE_BASENAME}.module
+; files[] = ${TM_NEW_FILE_BASENAME}.admin.inc
+; files[] = ${TM_NEW_FILE_BASENAME}.class.inc
+
+; Module dependencies
+; dependencies[] = mymodule
+; dependencies[] = theirmodule (1.2)
+; dependencies[] = anothermodule (>=2.4)
+; dependencies[] = views (3.x)
+
+; Configuration page
+; configure = admin/config/${TM_NEW_FILE_BASENAME}
+
+
+; For further information about configuration options, see
+; - http://drupal.org/node/542202
