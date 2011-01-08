@@ -1,14 +1,14 @@
 /**
- * Implements hook_block_view().
+ * Implements hook_block_configure().
  */
-function <?php print $basename; ?>_block_configure(\ $delta = '') {
+function <?php print $basename; ?>_block_configure(\$delta = '') {
   \$form = array();
   if (\$delta == '$1') {
-    $form['$2'] = array(
+    \$form['$2'] = array(
       $3
     );
   }
-  return $form;
+  return \$form;
 }
 
 $4
