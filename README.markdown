@@ -38,7 +38,7 @@ Set the following Shell Variable:
   <tr><td>TM_DRUPAL_VERSION</td><td>6</td></tr>
 </table>
 
-You can change this variable when switching between projects or alternatively you may wish to set up a [Project Dependent Variable](?project_dependent_variables).
+You can change this variable when switching between projects or alternatively you may wish to set up a [Project Dependent Variable](http://manual.macromates.com/en/environment_variables.html).
 
 ## API location:
 
