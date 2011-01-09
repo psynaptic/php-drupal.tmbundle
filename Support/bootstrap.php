@@ -1,11 +1,27 @@
 <?php
 
 $version = textmate_detect_drupal_version();
-$basename = isset($_SERVER['TM_FILENAME']) ? preg_replace('/\..+$/', '', $_SERVER['TM_FILENAME']) : 'module';
+$basename = textmate_detect_basename($_SERVER['TM_FILEPATH']);
 // TODO this breaks javascript scope for some reason.
 //$theme_name = textmate_detect_drupal_theme();
 
 //============================================================================
+
+function textmate_detect_basename($filepath) {
+  $nomask = array('.', '..', 'CVS');
+  $path = explode('/', dirname($filepath));
+  
+  while($path) {
+    if ($info = textmate_scan_directory(implode('/', $path), "/.*\.info$/", $nomask, 0, FALSE)) {
+      $info = array_shift($info);
+      return $info->name;
+    }
+    
+    array_pop($path);
+  }
+  
+  return 'hook';
+}
 
 function textmate_find_command($name) {
   global $version;
@@ -161,38 +177,28 @@ function textmate_parse_info_file($filename) {
   return $info;
 }
 
-function textmate_scan_directory($dir, $mask, $options = array(), $depth = 0) {
-  // Merge in defaults.
-  $options += array(
-    'nomask' => '/(\.\.?|CVS)$/',
-    'callback' => 0,
-    'recurse' => TRUE,
-    'key' => 'filepath',
-    'min_depth' => 0,
-  );
-
-  $options['key'] = in_array($options['key'], array('filepath', 'filename', 'name')) ? $options['key'] : 'filepath';
+function textmate_scan_directory($dir, $mask, $nomask = array('.', '..', 'CVS'), $callback = 0, $recurse_max_depth = TRUE, $key = 'filename', $min_depth = 0, $include_dot_files = FALSE, $depth = 0) {
+  $key = (in_array($key, array('filename', 'basename', 'name')) ? $key : 'filename');
   $files = array();
+
   if (is_dir($dir) && $handle = opendir($dir)) {
-    while (FALSE !== ($filename = readdir($handle))) {
-      if (!preg_match($options['nomask'], $filename) && $filename[0] != '.') {
-        $filepath = "$dir/$filename";
-        if (is_dir($filepath) && $options['recurse']) {
+    while (FALSE !== ($file = readdir($handle))) {
+      if (!in_array($file, $nomask) && (($include_dot_files && (!preg_match("/\.\+/",$file))) || ($file[0] != '.'))) {
+        if (is_dir("$dir/$file") && (($recurse_max_depth === TRUE) || ($depth < $recurse_max_depth))) {
           // Give priority to files in this folder by merging them in after any subdirectory files.
-          $files = array_merge(textmate_scan_directory($filepath, $mask, $options, $depth + 1), $files);
+          $files = array_merge(textmate_scan_directory("$dir/$file", $mask, $nomask, $callback, $recurse_max_depth, $key, $min_depth, $include_dot_files, $depth + 1), $files);
         }
-        elseif ($depth >= $options['min_depth'] && preg_match($mask, $filename)) {
-          // Always use this match over anything already set in $files with the
-          // same $$options['key'].
-          $file = (object) array(
-            'filepath' => $filepath,
-            'filename' => $filename,
-            'name' => pathinfo($filename, PATHINFO_FILENAME),
-          );
-          $key = $options['key'];
-          $files[$file->$key] = $file;
-          if ($options['callback']) {
-            $options['callback']($filepath);
+        elseif ($depth >= $min_depth && preg_match($mask, $file)) {
+          // Always use this match over anything already set in $files with the same $$key.
+          $filename = "$dir/$file";
+          $basename = basename($file);
+          $name = substr($basename, 0, strrpos($basename, '.'));
+          $files[$$key] = new stdClass();
+          $files[$$key]->filename = $filename;
+          $files[$$key]->basename = $basename;
+          $files[$$key]->name = $name;
+          if ($callback) {
+            $callback($filename);
           }
         }
       }
