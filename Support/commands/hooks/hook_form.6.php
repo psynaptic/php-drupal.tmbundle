@@ -2,16 +2,16 @@
  * Implements hook_form().
  */
 function <?php print $basename; ?>_form(&\$node, \$form_state) {
-  $form = array();
-  $type = node_get_types('type', $node);
+  \$form = array();
+  \$type = node_get_types('type', \$node);
   
-  $form['title'] = array(
+  \$form['title'] = array(
     '#type'=> 'textfield',
-    '#title' => check_plain($type->title_label),
+    '#title' => check_plain(\$type->title_label),
     '#required' => TRUE,
   );
     
-  return $form;
+  return \$form;
 }
 
 $1
