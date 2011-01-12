@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer</string>
+	<key>name</key>
+	<string>Regions 6.x</string>
+	<key>scope</key>
+	<string>text.plain</string>
+	<key>tabTrigger</key>
+	<string>regions</string>
+	<key>uuid</key>
+	<string>7234CC01-B00A-40E8-A5EB-632271B7DEAC</string>
+</dict>
+</plist>
