@@ -226,6 +226,16 @@
 				<key>name</key>
 				<string>Form API</string>
 			</dict>
+			<key>8FC09764-D5BD-4DE5-B375-A7152393C5D3</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>7234CC01-B00A-40E8-A5EB-632271B7DEAC</string>
+					<string>C3A196A5-3627-4E02-A1C2-A0F5971044AC</string>
+				</array>
+				<key>name</key>
+				<string>Info file</string>
+			</dict>
 			<key>A06188ED-D5AB-4F87-A002-3CCF8340574E</key>
 			<dict>
 				<key>items</key>
@@ -434,6 +444,7 @@
 					<string>FFD3FC9F-45F0-4A18-8092-AFC2B6C2BCEB</string>
 					<string>7E44F389-AE08-43E7-92ED-89BF6689DF7E</string>
 					<string>8E3E50A9-C25C-4637-B4A7-6FFCA9D295DA</string>
+					<string>8FC09764-D5BD-4DE5-B375-A7152393C5D3</string>
 					<string>B7AF61F2-4FEF-473A-9F51-CF09F82490D9</string>
 				</array>
 				<key>name</key>
