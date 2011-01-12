@@ -37,7 +37,7 @@ function textmate_find_command($name) {
   elseif (strpos($name, 'template_preprocess_') === 0) {
     $folder = 'preprocess/';
   }
-  
+
   elseif (strpos($name, 'schema_') === 0) {
     $folder = 'schema/';
     $name = str_replace('schema_', '', $name);
@@ -46,7 +46,7 @@ function textmate_find_command($name) {
   elseif (strpos($name, 'test_') === 0) {
     $folder = 'simpletest/';
   }
-  
+
   elseif (strpos($name, 'element_') === 0) {
     $folder = 'fapi/elements/';
     $name = str_replace('element_', '', $name);
@@ -56,12 +56,12 @@ function textmate_find_command($name) {
     $folder = 'fapi/controls/';
     $name = str_replace('fapi_', '', $name);
   }
-  
+
   else {
     $folder = '';
   }
 
-  $files = array(    
+  $files = array(
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.$version.php",
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.php",
     $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/does_not_exist.php",
