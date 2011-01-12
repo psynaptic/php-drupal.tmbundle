@@ -5,7 +5,7 @@
 	<key>content</key>
 	<string>${TM_SELECTED_TEXT/^(['|"])?(.*?)(['|"])?$/t((?1:$1:")$2(?1:$1:"))/m}</string>
 	<key>keyEquivalent</key>
-	<string>@L</string>
+	<string>~@L</string>
 	<key>name</key>
 	<string>Wrap in t()</string>
 	<key>scope</key>
