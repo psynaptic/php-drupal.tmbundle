@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>dvr(${1:\$${2:node}});</string>
+	<string>dvr(${1:\$${2:content}});</string>
 	<key>name</key>
 	<string>dvr</string>
 	<key>scope</key>

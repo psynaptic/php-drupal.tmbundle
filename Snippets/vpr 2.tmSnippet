@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>vpr(${1:\$${2:message}});</string>
+	<string>vpr(${1:\$${2:content}});</string>
 	<key>name</key>
 	<string>vpr</string>
 	<key>scope</key>

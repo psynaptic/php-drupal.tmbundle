@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>dpm(${1:\$${2:node}});</string>
+	<string>dpm(${1:\$${2:content}});</string>
 	<key>name</key>
 	<string>dpm</string>
 	<key>scope</key>

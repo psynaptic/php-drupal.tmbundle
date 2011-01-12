@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php dpm_once(${1:\$${2:node}}); ?&gt;</string>
+	<string>&lt;?php dpm_once(${1:\$${2:content}}); ?&gt;</string>
 	<key>name</key>
 	<string>&lt;?php dpm_once</string>
 	<key>scope</key>

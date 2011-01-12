@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php debug(${1:\$${2:vars}}); ?&gt;</string>
+	<string>&lt;?php debug(${1:\$${2:variable}}); ?&gt;</string>
 	<key>name</key>
 	<string>&lt;?php debug</string>
 	<key>scope</key>

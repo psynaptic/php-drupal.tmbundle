@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>kpr(${1:\$${2:node}});</string>
+	<string>kpr(${1:\$${2:content}});</string>
 	<key>name</key>
 	<string>kpr</string>
 	<key>scope</key>

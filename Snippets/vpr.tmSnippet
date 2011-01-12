@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>&lt;?php vpr(${1:\$${2:message}}); ?&gt;</string>
+	<string>&lt;?php vpr(${1:\$${2:content}}); ?&gt;</string>
 	<key>name</key>
 	<string>&lt;?php vpr</string>
 	<key>scope</key>
