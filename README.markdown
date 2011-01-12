@@ -77,7 +77,7 @@ Form control snippets have been added for easy form generation. Try the followin
 
 <code>
 &lt;?php
-$form['my_form'] = checkboxes&#x21E5;
+$form&#x21E5;
 </code>
 
 Again, tab stops have been used to allow you to edit the details. Try tabbing though.
