@@ -14,7 +14,7 @@ If you do intend to contribute to the bundle you should probably fork the main r
 
 Assuming you already have git installed, run the following lines in Terminal.app:
 
-    cd ~/Library/Application Support/TextMate/Pristine Copy/Bundles
+    cd ~/Library/Application\ Support/TextMate/Pristine\ Copy/Bundles
     git clone git://github.com/psynaptic/php-drupal.tmbundle.git
     osascript -e 'tell app "TextMate" to reload bundles'
 
