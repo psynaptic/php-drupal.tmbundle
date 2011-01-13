@@ -54,7 +54,7 @@ Set the following Shell Variable:
 
 <table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
   <tr><th>variable</th><th>value</th></tr>
-  <tr><td>TM_DRUPAL_VERSION</td><td>6</td></tr>
+  <tr><td>TM_DRUPAL_VERSION</td><td>7</td></tr>
 </table>
 
 You can change this variable when switching between projects or alternatively you may wish to set up a [Project Dependent Variable](http://manual.macromates.com/en/environment_variables.html).
@@ -97,7 +97,7 @@ This will display only hooks which start with `hook_form`. Once you have found t
 hook_help&#x21E5;
 </code>
 
-Some hooks have tab stops to make it easier to edit the inserted code. Try pressing tab a few times to step through code. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
+Some hooks have tab stops to make it easier to edit the inserted code. Try pressing tab a few times to step through the tab stops. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
 
 ## FAPI
 
@@ -119,47 +119,49 @@ Tab stops have been used to allow you to edit the details.
 
 ## Hooks
 
-Snippets files for hooks are generated from Drupal's codebase using a drush script. These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks/`.
+Snippets files for hooks are generated from Drupal's codebase using a drush script. These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks`.
 
-Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/custom/hooks/`.
+Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/custom/hooks`.
 
-Any snippets that don't have custom tab stops will just have the function body selected, allowing you to delete and quickly get down to writing your own function body. However, you may find this isn't enough for your needs and might want to create custom snippets with tab stops to help speed up your workflow with common functions.
+Any snippets that don't have custom tab stops will just have the function body selected, allowing you to delete and quickly get down to writing your own function body. However, for some of the more common functions, you may find this isn't enough for your needs and might want to create custom snippets with tab stops to help speed up your workflow.
 
-See the section below on [#modifying-an-existing-snippet](Modifying an existing snippet) for details.
+See the section below on *Modifying an existing snippet* for details.
 
 ## Creating custom snippets
 
-Found within Bundle tools sub-menu of the bundle are three commands to help with the creation of snippets:
+Found within the *Bundle tools* sub-menu are three special commands to help with the creation of new snippets:
 
-*Format document as snippet*
+**Format document as snippet**
 
-* Escapes any characters that require it.
-* Adds doxygen function header comments for hooks and theme functions.
+* Escapes any special characters for use as a snippet.
+* Automatically adds doxygen function header comments for hooks and theme functions.
 
-*Wrap selection in placeholder*
+**Wrap selection in placeholder**
 
 * Adds placeholder wrappers for tabs stops around selected text.
 * Adds basic tab stops at caret position if no text is selected.
 
-*Print basename*
+**Print basename**
 
 * Dynamically prints the name of the module.
 
-The 2 main methods for creating snippets is outlined below.
+The two main methods for creating snippets is outlined below.
 
 ### Modifying an existing snippet
 
-If you find a commonly used function that has no custom tab stops and you wish to add some, you can copy , then make your desired changes to the new file. This will automatically override the generated file from that point on.
+If you find you need a different structure for an existing snippet you can copy the original file to a specific directory and make your desired changes there. This will automatically override the generated file from that point on.
 
-1. Copy the original file in `php-drupal.tmbundle/Support/commands/generated/hooks/` to `php-drupal.tmbundle/Support/commands/custom/hooks/`.
+1. Copy the original file from `php-drupal.tmbundle/Support/commands/generated/hooks` to `php-drupal.tmbundle/Support/commands/custom/hooks`.
 
 2. Either write your own function body or if you are happy with the existing one you can use that.
 
-3. Select the text you wish to automatically replace with the name of the module and run the `Print basename` command. Repeat as necessary.
+3. Select the text you wish to automatically replace with the name of the module and run the *Print basename* command. Repeat as necessary.
 
-4. Select any text you wish to be a placeholder for a tab stop and run `Wrap selection in placeholder`. Repeat as necessary.
+4. Select any text you wish to be a placeholder for a tab stop and run *Wrap selection in placeholder*. Repeat as necessary.
 
-5. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+5. If this is a whole function snippet, leave a blank newline after the closing brace and add a final tab stop at the bottom of the file (on the last line).
+
+6. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
 
 Your new snippet should now override the generated one and you can continue working.
 
@@ -171,21 +173,21 @@ The basic workflow is as follows:
 
 1. Open a new TextMate document.
 
-2. Copy a function from the API that you wish to covert into a snippet.
+2. Paste a function that you wish to covert into a snippet.
 
-3. Run `Format document as snippet`.
+3. Run *Format document as snippet*.
 
-4. Select the text you wish to automatically replace with the name of the module and run the `Print basename` command. Repeat as necessary.
+4. Select the text you wish to automatically replace with the name of the module and run the *Print basename* command. Repeat as necessary.
 
-5. Select any text you wish to be a placeholder for a tab stop and run `Wrap selection in placeholder`. Repeat as necessary.
+5. Select any text you wish to be a placeholder for a tab stop and run *Wrap selection in placeholder*. Running this without a selection also works, just without a 'default' value. Repeat as necessary.
 
-6. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+6. If this is a whole function snippet, leave a blank newline after the closing brace and add a final tab stop at the bottom of the file (on the last line).
 
-7. Copy one of the existing commands in the Bundle Editor and adjust the parameter for textmate\_find_command to the correct value.
+7. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
 
-Hopefully, this will help you in creating your own snippets.
+8. Copy one of the existing commands in the Bundle Editor and adjust the parameter for textmate\_find_command to the correct value.
 
-If you feel your work could benefit others please contribute it back!
+Hopefully, this will help you to create your own snippets. If you feel your work could benefit others please contribute it back!
 
 ## Resources
 
