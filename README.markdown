@@ -4,11 +4,11 @@
 
 ## To Contribute or Not to Contribute
 
-Deciding what type of user you are, or intend to be, could help reduce the amount of shuffling you need to do later and will likely reduce confusion if something doesn't work as expected. For bundles installed to /Library/Application Support/TextMate/Bundles or ~/Library/Application Support/TextMate/Pristine Copy/Bundles TextMate creates delta files which are not good for VCS. 
+Deciding what type of user you are, or intend to be, could help reduce the amount of shuffling you need to do later and will likely reduce confusion if something doesn't work as expected. For bundles installed to */Library/Application Support/TextMate/Bundles* or *~/Library/Application Support/TextMate/Pristine Copy/Bundles TextMate* creates delta files which are not good for VCS. 
 
-If you don't intend to contribute, or you just want to get up and running quickly, you should download (from GitHub's download feature, or clone using git if you have it installed) and place the files into either /Library/Application Support/TextMate/Bundles or ~/Library/Application Support/TextMate/Pristine Copy/Bundles (the latter is the default location for double clicked bundles). If you make any changes to the bundle, when you come to update the bundle you won't loose your edits.
+If you don't intend to contribute, or you just want to get up and running quickly, you should download (from GitHub's download feature, or clone using git if you have it installed) and place the files into either */Library/Application Support/TextMate/Bundles* or *~/Library/Application Support/TextMate/Pristine Copy/Bundles* (the latter is the default location for double clicked bundles). If you make any changes to the bundle, when you come to update the bundle you won't loose your edits.
 
-If you do intend to contribute to the bundle you should probably fork the main repository on GitHub and clone your fork to ~/Library/Application Support/TextMate/Bundles. This will allow you to work on the bundle and commit files to git. When you are ready to submit the files to the main repository you should set up a pull request.
+If you do intend to contribute to the bundle you should probably fork the main repository on GitHub and clone your fork to *~/Library/Application Support/TextMate/Bundles*. This will allow you to work on the bundle and commit files to git. When you are ready to submit the files to the main repository you should set up a pull request.
 
 ## Quickstart (safe option):
 
@@ -86,7 +86,7 @@ Once you have found the hook you need, press enter to accept the selection, then
 
 Some hooks have custom tab triggers set up for them but most will just have the function body selected so you can quickly delete and get down to writing your own function body.
 
-If you find a commonly used function that has no custom tab triggers and you wish to add some, you can copy the original file in php-drupal.tmbundle/Support/commands/generated/hooks/ into php-drupal.tmbundle/Support/commands/custom/hooks/ and make your changes to the new file. This will override the generated file from now on. If you feel this could be useful to others please do contribute it back!
+If you find a commonly used function that has no custom tab triggers and you wish to add some, you can copy the original file in *php-drupal.tmbundle/Support/commands/generated/hooks/* into *php-drupal.tmbundle/Support/commands/custom/hooks/* and make your changes to the new file. This will override the generated file from now on. If you feel this could be useful to others please do contribute it back!
 
 ### Hooks
 
