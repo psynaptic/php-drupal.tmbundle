@@ -14,7 +14,7 @@ The PHP Drupal bundle provides Drupal developers with shortcuts for creating Dru
 - Simpletest
 - Preprocess functions
 - Automatic detection of Drupal version when .info file available
-- Drupal 5 and 6 supported
+- Drupal 5, Drupal 6 and Drupal 7 supported
 - Snippet building commands - makes it easier to contribute more snippets!
 
 Planned features...
