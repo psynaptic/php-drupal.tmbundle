@@ -119,7 +119,7 @@ Tab stops have been used to allow you to edit the details.
 
 ## Hooks
 
-Snippets files for hooks are generated from Drupal's codebase using a drush script. These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks`.
+Snippets files for hooks are generated from Drupal's codebase using a [drush script](https://github.com/webflo/drush_textmate/blob/master/textmate.drush.inc). These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks`.
 
 Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/custom/hooks`.
 
