@@ -81,15 +81,17 @@ Using http://api.drupal.org will currently only give you reference documentation
 
 ## Hook completion
 
-Just like the PHP bundle's function completion feature, the PHP Drupal bundle provides function completion of all Drupal core hooks (currently only Drupal 7 is supported).
+Just like the PHP bundle's function completion feature, the PHP Drupal bundle provides function completion of all Drupal core hooks (currently only Drupal 7 is fully supported).
 
-To invoke the completions menu use the `⌥+H` (Alt+H) key command. This will display all available hooks in a select list, allowing you to type characters to filter the list.
+Invoking the completions menu:
 
-You can also invoke the completions menu on an existing string. For instance, type `hook_form` then press `⌥+H`. This will display only hooks which start with `hook_form`.
+`⌥+H` (Alt+H)
 
-Once you have found the hook you need, press `⌅` (Enter) to accept the selection, then press `⇥` (Tab) to print the function into your document.
+This will display all available hooks in a select list, allowing you to type characters to filter the list. You can also invoke the completions menu on an existing string.
 
-You can of course use the hooks without invoking the completions menu, using the following:
+`hook_form` then `⌥+H`
+
+This will display only hooks which start with `hook_form`. Once you have found the hook you need, press `⌅` (Enter) to accept the selection, then press `⇥` (Tab) to print the function into your document. You can of course use the hooks without invoking the completions menu:
 
 <code>
 hook_help&#x21E5;
@@ -97,25 +99,21 @@ hook_help&#x21E5;
 
 Some hooks have tab stops to make it easier to edit the inserted code. Try pressing tab a few times to step through code. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
 
-## FAPI Controls
+## FAPI
 
 Form control snippets have been added for easy form generation.
-
-Try the following:
 
 <code>
 $form&#x21E5;
 </code>
 
-Again, tab stops have been used to allow you to edit the details. Try tabbing though.
-
-## FAPI Elements
-
-Adding more elements to the form is easy. Try the following:
+Adding more elements to the form is easy.
 
 <code>
 \#description&#x21E5;
 </code>
+
+Tab stops have been used to allow you to edit the details.
 
 # Advanced
 
