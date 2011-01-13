@@ -89,8 +89,6 @@ You can also invoke the completions menu on an existing string. For instance, ty
 
 Once you have found the hook you need, press `⌅` (Enter) to accept the selection, then press `⇥` (Tab) to print the function into your document.
 
-## Hooks
-
 You can of course use the hooks without invoking the completions menu, using the following:
 
 <code>
