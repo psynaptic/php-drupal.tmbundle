@@ -11,7 +11,7 @@ function textmate_find_command($name) {
   global $version;
 
   if ((!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
-    return $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/not_installed_properly.php";
+    return $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/not_installed_properly.php';
   }
 
   if (strpos($name, 'theme_') === 0) {
@@ -62,9 +62,11 @@ function textmate_find_command($name) {
   }
 
   $files = array(
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.$version.php",
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/$folder$name.php",
-    $_SERVER['TM_BUNDLE_SUPPORT'] . "/commands/misc/does_not_exist.php",
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.' . $version . '.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.' . $version . '.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/does_not_exist.php',
   );
 
   foreach ($files as $file)
