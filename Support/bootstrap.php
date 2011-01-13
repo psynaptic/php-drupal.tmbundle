@@ -63,8 +63,8 @@ function textmate_find_command($name) {
 
   $files = array(
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.' . $version . '.php',
-    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.' . $version . '.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/does_not_exist.php',
   );
