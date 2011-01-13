@@ -1,14 +1,38 @@
+# Features
+
+The PHP Drupal bundle provides Drupal developers with shortcuts for creating Drupal modules and themes.
+
+- Drupal 5, 6 and 7 are supported
+- Hook snippets (complete list of core hooks for Drupal 7, incomplete for other versions)
+- Hook completion (the same as can be found in the PHP bundle)
+- Automatic detection of Drupal version when .info file is discoverable
+- Theme and preprocess functions
+- FAPI controls and elements
+- Menu items
+- Devel debugging functions (kpr, dpm, dpr, dvm, dvr)
+- Views debugging functions (vpr, views\_trace, views\_var_export)
+- Useful snippets (l(), t())
+- Useful commands (Wrap in t(), Convert template filename to preprocess function)
+- Snippet building tools - makes it easier to contribute more snippets!
+- Simpletest (very basic - needs love)
+
+Planned features...
+
+- Add more hooks
+- Add more theme functions
+- Default template files
+
 # Installation
 
 >For background information and best practices for installing TextMate bundles please see [Installing a Bundle](http://manual.macromates.com/en/bundles#installing_a_bundle) from the TextMate manual.
 
-## To Contribute or Not to Contribute
+## Install Location
 
-Deciding what type of user you are, or intend to be, could help reduce the amount of shuffling you need to do later and will likely reduce confusion if something doesn't work as expected. For bundles installed to /Library/Application Support/TextMate/Bundles or ~/Library/Application Support/TextMate/Pristine Copy/Bundles TextMate creates delta files which are not good for VCS. 
+Deciding what type of user you are, or intend to be, could help reduce the amount of shuffling you need to do later and will likely reduce confusion if something doesn't work as expected. For bundles installed to `/Library/Application Support/TextMate/Bundles` or `~/Library/Application Support/TextMate/Pristine Copy/Bundles` TextMate creates delta files which are not good for VCS. 
 
-If you don't intend to contribute, or you just want to get up and running quickly, you should download (from GitHub's download feature, or clone using git if you have it installed) and place the files into either /Library/Application Support/TextMate/Bundles or ~/Library/Application Support/TextMate/Pristine Copy/Bundles (the latter is the default location for double clicked bundles). If you make any changes to the bundle, when you come to update the bundle you won't loose your edits.
+If you don't intend to contribute, or you just want to get up and running quickly, you should download the bundle from GitHub's download feature, or clone using git (easier to update) if you have it installed, to either `/Library/Application Support/TextMate/Bundles` or `~/Library/Application Support/TextMate/Pristine Copy/Bundles` (the latter is the default location for double clicked bundles). If you make any changes to the bundle, when you come to update the bundle you won't loose your edits.
 
-If you do intend to contribute to the bundle you should probably fork the main repository on GitHub and clone your fork to ~/Library/Application Support/TextMate/Bundles. This will allow you to work on the bundle and commit files to git. When you are ready to submit the files to the main repository you should set up a pull request.
+If you do intend to contribute to the bundle you should probably fork the main repository on GitHub and clone your fork to `~/Library/Application Support/TextMate/Bundles`. This will allow you to work on the bundle and commit your changes to git. When you are ready to submit the files to the main repository you should set up a pull request.
 
 ## Quickstart (safe option):
 
@@ -20,7 +44,7 @@ Assuming you already have git installed, run the following lines in Terminal.app
 
 ## Set the Required Shell Variables
 
-There are 2 Shell Variables which should be set for this bundle. Shell Variables may be set up using `TextMate => Preferences => Advanced => Shell Variables`.
+There are two Shell Variables which should be set for this bundle. Shell Variables may be set up using `TextMate => Preferences => Advanced => Shell Variables`.
 
 ### Drupal version variable:
 
@@ -46,51 +70,28 @@ Set the following Shell Variable:
   <tr><td>TM_DRUPAL_API</td><td>http://api.drupal.org</td></tr>
 </table>
 
-Using api.drupal.org will only give you reference documentation for Drupal core functions. If you wish to be able to retrieve reference documentation for Drupal's most popular contributed modules as well, use the following settings instead:
+Using http://api.drupal.org will currently only give you reference documentation for Drupal core functions. If you wish to be able to retrieve reference documentation for Drupal's most popular contributed modules as well, use the following settings instead:
 
-<table border="1" cellspacing="0" cellpadding="5" style="text-align:left;margin-bottom:1em">
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:left;">
   <tr><th>variable</th><th>value</th></tr>
   <tr><td>TM_DRUPAL_API</td><td>http://drupalcontrib.org</td></tr>
 </table>
 
-## Features
+# Usage
 
-The PHP Drupal bundle provides Drupal developers with shortcuts for creating Drupal modules and themes.
+## Hook completion
 
-- FAPI controls and elements
-- Menu items
-- Hooks with function auto-completion (complete for Drupal 7, incomplete for other versions)
-- Theme functions (incomplete)
-- Devel debugging functions (dpm, dpr, dvm, dvr)
-- Views debugging functions (vpr, views\_trace, views\_var_export, etc)
-- Useful snippets (if node, l(), t())
-- Simpletest
-- Preprocess functions
-- Automatic detection of Drupal version when .info file available
-- Drupal 5, Drupal 6 and Drupal 7 supported
-- Snippet building commands - makes it easier to contribute more snippets!
+Just like the PHP bundle's function completion feature, the PHP Drupal bundle provides function completion of all Drupal core hooks (currently only Drupal 7 is supported).
 
-Planned features...
+To invoke the completions menu use the `⌥+H` (Alt+H) key command. This will display all available hooks in a select list, allowing you to type characters to filter the list.
 
-- Add more hooks
-- Add more theme functions
-- Default template files
+You can also invoke the completions menu on an existing string. For instance, type `hook_form` then press `⌥+H`. This will display only hooks which start with `hook_form`.
 
-## Usage
+Once you have found the hook you need, press `⌅` (Enter) to accept the selection, then press `⇥` (Tab) to print the function into your document.
 
-### Hook completion
+## Hooks
 
-Press Alt+H to open the completion menu. This will display all hooks, allowing you to type characters to filter the list. You can also invoke the completions menu on an existing string, for instance type hook\_form and press Alt+H.
-
-Once you have found the hook you need, press enter to accept the selection, then press tab to print the function into your document.
-
-Some hooks have custom tab triggers set up for them but most will just have the function body selected so you can quickly delete and get down to writing your own function body.
-
-If you find a commonly used function that has no custom tab triggers and you wish to add some, you can copy the original file in php-drupal.tmbundle/Support/commands/generated/hooks/ into php-drupal.tmbundle/Support/commands/custom/hooks/ and make your changes to the new file. This will override the generated file from now on. If you feel this could be useful to others please do contribute it back!
-
-### Hooks
-
-You can use the hooks without invoking the completions menu, try the following:
+You can of course use the hooks without invoking the completions menu, using the following:
 
 <code>
 hook_help&#x21E5;
@@ -98,9 +99,11 @@ hook_help&#x21E5;
 
 Some hooks have tab stops to make it easier to edit the inserted code. Try pressing tab a few times to step through code. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
 
-### FAPI Form Controls
+## FAPI Controls
 
-Form control snippets have been added for easy form generation. Try the following:
+Form control snippets have been added for easy form generation.
+
+Try the following:
 
 <code>
 $form&#x21E5;
@@ -108,7 +111,7 @@ $form&#x21E5;
 
 Again, tab stops have been used to allow you to edit the details. Try tabbing though.
 
-### FAPI Elements
+## FAPI Elements
 
 Adding more elements to the form is easy. Try the following:
 
@@ -116,7 +119,79 @@ Adding more elements to the form is easy. Try the following:
 \#description&#x21E5;
 </code>
 
+# Advanced
+
+## Hooks
+
+Snippets files for hooks are generated from Drupal's codebase using a drush script. These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks/`.
+
+Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/custom/hooks/`.
+
+Any snippets that don't have custom tab stops will just have the function body selected, allowing you to delete and quickly get down to writing your own function body. However, you may find this isn't enough for your needs and might want to create custom snippets with tab stops to help speed up your workflow with common functions.
+
+See the section below on [#modifying-an-existing-snippet](Modifying an existing snippet) for details.
+
+## Creating custom snippets
+
+Found within Bundle tools sub-menu of the bundle are three commands to help with the creation of snippets:
+
+*Format document as snippet*
+
+* Escapes any characters that require it.
+* Adds doxygen function header comments for hooks and theme functions.
+
+*Wrap selection in placeholder*
+
+* Adds placeholder wrappers for tabs stops around selected text.
+* Adds basic tab stops at caret position if no text is selected.
+
+*Print basename*
+
+* Dynamically prints the name of the module.
+
+The 2 main methods for creating snippets is outlined below.
+
+### Modifying an existing snippet
+
+If you find a commonly used function that has no custom tab stops and you wish to add some, you can copy , then make your desired changes to the new file. This will automatically override the generated file from that point on.
+
+1. Copy the original file in `php-drupal.tmbundle/Support/commands/generated/hooks/` to `php-drupal.tmbundle/Support/commands/custom/hooks/`.
+
+2. Either write your own function body or if you are happy with the existing one you can use that.
+
+3. Select the text you wish to automatically replace with the name of the module and run the `Print basename` command. Repeat as necessary.
+
+4. Select any text you wish to be a placeholder for a tab stop and run `Wrap selection in placeholder`. Repeat as necessary.
+
+5. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+
+Your new snippet should now override the generated one and you can continue working.
+
+### Creating a new snippet
+
+If you find some code you want to use and it doesn't already have a snippet in the generated directory of the bundle you need to create it from scratch.
+
+The basic workflow is as follows:
+
+1. Open a new TextMate document.
+
+2. Copy a function from the API that you wish to covert into a snippet.
+
+3. Run `Format document as snippet`.
+
+4. Select the text you wish to automatically replace with the name of the module and run the `Print basename` command. Repeat as necessary.
+
+5. Select any text you wish to be a placeholder for a tab stop and run `Wrap selection in placeholder`. Repeat as necessary.
+
+6. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+
+7. Copy one of the existing commands in the Bundle Editor and adjust the parameter for textmate\_find_command to the correct value.
+
+Hopefully, this will help you in creating your own snippets.
+
+If you feel your work could benefit others please contribute it back!
+
 ## Resources
 
-* [Drupal Textmate project](http://drupal.org/project/textmate) - Bug reports, feature requests and patches welcome.
-* [Drupal IDE group](http://groups.drupal.org/drupal-ide) - General discussion
+* [PHP Drupal TextMate project page (d.o)](http://drupal.org/project/textmate) - Bug reports, feature requests and patches welcome.
+* [Drupal IDE group (g.d.o)](http://groups.drupal.org/drupal-ide) - General discussion
