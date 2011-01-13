@@ -1,0 +1,44 @@
+/**
+ * Implements hook_node_operations().
+ */
+function <?php print $basename; ?>_node_operations() {
+  ${1:\$operations = array(
+    'publish' => array(
+      'label' => t('Publish selected content'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('status' => NODE_PUBLISHED)),
+    ),
+    'unpublish' => array(
+      'label' => t('Unpublish selected content'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('status' => NODE_NOT_PUBLISHED)),
+    ),
+    'promote' => array(
+      'label' => t('Promote selected content to front page'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('status' => NODE_PUBLISHED, 'promote' => NODE_PROMOTED)),
+    ),
+    'demote' => array(
+      'label' => t('Demote selected content from front page'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('promote' => NODE_NOT_PROMOTED)),
+    ),
+    'sticky' => array(
+      'label' => t('Make selected content sticky'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('status' => NODE_PUBLISHED, 'sticky' => NODE_STICKY)),
+    ),
+    'unsticky' => array(
+      'label' => t('Make selected content not sticky'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('sticky' => NODE_NOT_STICKY)),
+    ),
+    'delete' => array(
+      'label' => t('Delete selected content'),
+      'callback' => NULL,
+    ),
+  );
+  return \$operations;}
+}
+
+$2

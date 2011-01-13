@@ -1,8 +1,8 @@
 /**
  * Implements hook_node_type_insert().
  */
-function <?php print $basename; ?>_node_type_insert(\$info) { 
-  ${1:// Code goes here.}
+function <?php print $basename; ?>_node_type_insert(\$info) {
+  $1
 }
 
 $2

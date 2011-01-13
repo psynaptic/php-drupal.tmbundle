@@ -2,9 +2,10 @@
  * Implements hook_block_save().
  */
 function <?php print $basename; ?>_block_save(\$delta = '', \$edit = array()) {
-  if (\$delta == '$1') {
-    variable_set('$2', \$edit['$3']);
-  }
+  ${1:// This example comes from node.module.
+  if (\$delta == 'recent') {
+    variable_set('node_recent_block_count', \$edit['node_recent_block_count']);
+  \}}
 }
 
-$4
+$2

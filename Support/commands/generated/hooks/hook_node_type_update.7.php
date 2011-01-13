@@ -6,7 +6,7 @@ function <?php print $basename; ?>_node_type_update(\$info) {
     \$setting = variable_get('comment_' . \$info->old_type, COMMENT_NODE_OPEN);
     variable_del('comment_' . \$info->old_type);
     variable_set('comment_' . \$info->type, \$setting);
-  }}
+  \}}
 }
 
 $2

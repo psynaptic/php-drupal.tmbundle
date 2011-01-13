@@ -2,7 +2,15 @@
  * Implements hook_block_view_alter().
  */
 function <?php print $basename; ?>_block_view_alter(&\$data, \$block) {
-  ${1:// Code goes here.}
+  ${1:// Remove the contextual links on all blocks that provide them.
+  if (is_array(\$data['content']) && isset(\$data['content']['#contextual_links'])) {
+    unset(\$data['content']['#contextual_links']);
+  \}
+  // Add a theme wrapper function defined by the current module to all blocks
+  // provided by the "somemodule" module.
+  if (is_array(\$data['content']) && \$block->module == 'somemodule') {
+    \$data['content']['#theme_wrappers'][] = 'mymodule_special_block';
+  \}}
 }
 
 $2

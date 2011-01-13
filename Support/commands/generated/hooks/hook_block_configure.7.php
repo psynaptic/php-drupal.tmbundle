@@ -2,13 +2,17 @@
  * Implements hook_block_configure().
  */
 function <?php print $basename; ?>_block_configure(\$delta = '') {
+  ${1:// This example comes from node.module.
   \$form = array();
-  if (\$delta == '$1') {
-    \$form['$2'] = array(
-      $3
+  if (\$delta == 'recent') {
+    \$form['node_recent_block_count'] = array(
+      '#type' => 'select',
+      '#title' => t('Number of recent content items to display'),
+      '#default_value' => variable_get('node_recent_block_count', 10),
+      '#options' => drupal_map_assoc(array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30)),
     );
-  }
-  return \$form;
+  \}
+  return \$form;}
 }
 
-$4
+$2

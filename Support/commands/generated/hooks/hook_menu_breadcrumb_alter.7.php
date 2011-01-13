@@ -1,0 +1,17 @@
+/**
+ * Implements hook_menu_breadcrumb_alter().
+ */
+function <?php print $basename; ?>_menu_breadcrumb_alter(&\$active_trail, \$item) {
+  ${1:// Always display a link to the current page by duplicating the last link in
+  // the active trail. This means that menu_get_active_breadcrumb() will remove
+  // the last link (for the current page), but since it is added once more here,
+  // it will appear.
+  if (!drupal_is_front_page()) {
+    \$end = end(\$active_trail);
+    if (\$item['href'] == \$end['href']) {
+      \$active_trail[] = \$end;
+    \}
+  \}}
+}
+
+$2

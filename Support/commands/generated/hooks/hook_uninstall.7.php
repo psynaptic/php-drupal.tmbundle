@@ -2,7 +2,7 @@
  * Implements hook_uninstall().
  */
 function <?php print $basename; ?>_uninstall() {
-  ${0:variable_del($1);}
+  ${1:variable_del('upload_file_types');}
 }
 
 $2

@@ -4,9 +4,9 @@
 function <?php print $basename; ?>_user_update(&\$edit, \$account, \$category) {
   ${1:db_insert('user_changes')
     ->fields(array(
-    'uid' => \$account->uid, 
-    'changed' => time(),
-  ))
+      'uid' => \$account->uid,
+      'changed' => time(),
+    ))
     ->execute();}
 }
 

@@ -6,8 +6,8 @@ function <?php print $basename; ?>_user_role_update(\$role) {
   db_merge('my_module_table')
     ->key(array('rid' => \$role->rid))
     ->fields(array(
-    'role_description' => \$role->description,
-  ))
+      'role_description' => \$role->description
+    ))
     ->execute();}
 }
 

@@ -1,0 +1,43 @@
+/**
+ * Implements hook_token_info().
+ */
+function <?php print $basename; ?>_token_info() {
+  ${1:\$type = array(
+    'name' => t('Nodes'),
+    'description' => t('Tokens related to individual nodes.'),
+    'needs-data' => 'node',
+  );
+
+  // Core tokens for nodes.
+  \$node['nid'] = array(
+    'name' => t("Node ID"),
+    'description' => t("The unique ID of the node."),
+  );
+  \$node['title'] = array(
+    'name' => t("Title"),
+    'description' => t("The title of the node."),
+  );
+  \$node['edit-url'] = array(
+    'name' => t("Edit URL"),
+    'description' => t("The URL of the node's edit page."),
+  );
+
+  // Chained tokens for nodes.
+  \$node['created'] = array(
+    'name' => t("Date created"),
+    'description' => t("The date the node was posted."),
+    'type' => 'date',
+  );
+  \$node['author'] = array(
+    'name' => t("Author"),
+    'description' => t("The author of the node."),
+    'type' => 'user',
+  );
+
+  return array(
+    'types' => array('node' => \$type),
+    'tokens' => array('node' => \$node),
+  );}
+}
+
+$2
