@@ -93,7 +93,6 @@ If you find a commonly used function that has no custom tab triggers and you wis
 You can use the hooks without invoking the completions menu, try the following:
 
 <code>
-&lt;?php
 hook_help&#x21E5;
 </code>
 
@@ -104,7 +103,6 @@ Some hooks have tab stops to make it easier to edit the inserted code. Try press
 Form control snippets have been added for easy form generation. Try the following:
 
 <code>
-&lt;?php
 $form&#x21E5;
 </code>
 
@@ -115,7 +113,6 @@ Again, tab stops have been used to allow you to edit the details. Try tabbing th
 Adding more elements to the form is easy. Try the following:
 
 <code>
-&lt;?php
 \#description&#x21E5;
 </code>
 
