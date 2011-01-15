@@ -215,3 +215,17 @@ function textmate_detect_drupal_theme() {
     return $info->name;
   }
 }
+
+function textmate_docs_for_word($function) {
+  global $basename;
+  global $version;
+  $suggestions = array();
+  
+  $suggestions[] = preg_replace('/\A' . $basename .'_/', 'hook_', $function, 1);
+  $suggestions[] = preg_replace('/\A' . $basename .'_/', 'theme_', $function, 1);
+  $suggestions[] = $function;
+  
+  $suggestions = array_unique($suggestions);
+  
+  return $_ENV['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);
+}
