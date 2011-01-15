@@ -5,24 +5,11 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>DRUPAL_VERSION=${TM_DRUPAL_VERSION:=6}
-API_LOCATION=${TM_DRUPAL_API}
-
-if grep &lt;&lt;&lt;${TM_CURRENT_WORD:-!} -Esq '^[a-zA-Z0-9_]+$'
-then
-FILENAME=${TM_FILEPATH##*/}
-BASENAME=${FILENAME%%.*};
-if [ `echo "$TM_CURRENT_WORD" | grep -E "${BASENAME}_[0-9A-Za-z_]"` ]
-then
-HOOK=${TM_CURRENT_WORD##${BASENAME}}
-URL="${API_LOCATION}/api/function/hook${HOOK}/${DRUPAL_VERSION}"
-else
-URL="${API_LOCATION}/api/function/${TM_CURRENT_WORD}/${DRUPAL_VERSION}"
-
-fi
-exit_show_html "&lt;meta http-equiv='Refresh' content='0;URL=$URL'&gt;"
-else echo "Nothing to lookup (hint: place the caret on a function name)"
-fi</string>
+	<string>#!/usr/bin/env php
+&lt;?php
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+$url = textmate_docs_for_word($_ENV['TM_CURRENT_WORD']);
+print '&lt;meta http-equiv="refresh" content="0; URL='. $url .'"&gt;';</string>
 	<key>fallbackInput</key>
 	<string>none</string>
 	<key>input</key>
