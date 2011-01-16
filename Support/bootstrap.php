@@ -1,39 +1,77 @@
 <?php
 
-$version = textmate_detect_drupal_version();
-$basename = textmate_detect_basename($_SERVER['TM_FILEPATH']);
+$basename = 'hook';
+if (isset($_ENV['TM_DRUPAL_VERSION'])) {
+ $version = $_ENV['TM_DRUPAL_VERSION']; 
+}
 
-//============================================================================
-
-function textmate_detect_basename($filepath) {
+function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NULL) {
+  $settings = array(
+    'basename' => array(
+      'default' => TRUE,
+      'value' => $_basename,
+    ),
+    'version' => array(
+      'default' => TRUE,
+      'value' => ($_version == NULL) ? $_ENV['TM_DRUPAL_VERSION'] : $_version,
+    ),
+  );
+  
   $nomask = array('.', '..', 'CVS');
   $path = explode('/', dirname($filepath));
   
   while($path) {
-    if ($info = textmate_scan_directory(implode('/', $path), "/.*\.info$/", $nomask, 0, FALSE)) {
-      $info = array_shift($info);
-      return $info->name;
+    if ($file = textmate_scan_directory(implode('/', $path), "/.*\.info$/", $nomask, 0, FALSE)) {
+      $file = array_shift($file);
+      
+      if (isset($file->name) && $settings['basename']['default'] == TRUE) {
+        $settings['basename']['value'] = $file->name;
+        $settings['basename']['default'] = FALSE;
+      }
+      
+      // search [module].info file
+      if ($settings['version']['default'] == TRUE) {
+        $info = textmate_parse_info_file($file->filename);
+        if (!empty($info['core'])) {
+          $settings['version']['value'] = (int) $info['core'];
+          $settings['version']['default'] = FALSE;
+        }
+      }
+    }
+    
+    // search system.info file in drupal core
+    if ($settings['version']['default'] == TRUE) {
+      $info = textmate_parse_info_file(implode('/', $path) . '/modules/system/system.info');
+      if (!empty($info['core'])) {
+        print_r($info);
+        $settings['version']['value'] = (int) $info['core'];
+        $settings['version']['default'] = FALSE;
+      }        
+    }
+    
+    if ($settings['basename']['default'] == FALSE && $settings['version']['default'] == FALSE) {
+      return $settings;
     }
     
     array_pop($path);
   }
   
-  return 'hook';
+  return $settings;
 }
 
 function textmate_find_command($name) {
-  global $version;
-
   if ((!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
     return $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/not_installed_properly.php';
   }
 
   if (strpos($name, 'theme_') === 0) {
     $folder = 'theme/';
+    $fallback = 'theme';
   }
 
   elseif (strpos($name, 'hook_') === 0) {
     $folder = 'hooks/';
+    $fallback = 'hook';
   }
 
   elseif (strpos($name, 'drupal_') === 0) {
@@ -75,6 +113,10 @@ function textmate_find_command($name) {
     $folder = '';
   }
 
+  $settings = textmate_detect_settings($_SERVER['TM_FILEPATH'], $fallback);
+  $basename = $GLOBALS['basename'] = $settings['basename']['value'];
+  $version = $GLOBALS['version'] = $settings['version']['value'];
+  
   $files = array(
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/custom/' . $folder . $name . '.' . $version . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.' . $version . '.php',
@@ -82,36 +124,10 @@ function textmate_find_command($name) {
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $name . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/does_not_exist.php',
   );
-
+  
   foreach ($files as $file)
     if (file_exists($file))
       return $file;
-}
-
-function textmate_detect_drupal_version() {
-  if (isset($_SERVER['TM_DIRECTORY'])) {
-    // Check .info file in the current directory.
-    $info_files = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
-    if (!empty($info_files) && $info = textmate_parse_info_file(key($info_files))) {
-      if (!empty($info['core']))
-        return (int)$info['core'];
-    }
-
-    // Loop upwards until we find a Drupal installation.
-    $path = explode('/', $_SERVER['TM_DIRECTORY']);
-    while (!empty($path)) {
-      $system_module = implode('/', $path) . '/modules/system/system.module';
-      if (file_exists($system_module)) {
-        include $system_module;
-        return (int)VERSION;
-      }
-      array_pop($path);
-    }
-  }
-  if (empty($_ENV['TM_DRUPAL_VERSION'])) {
-    return $_SERVER['TM_DRUPAL_VERSION'];
-  }
-  return $_ENV['TM_DRUPAL_VERSION'];
 }
 
 function textmate_parse_info_file($filename) {
