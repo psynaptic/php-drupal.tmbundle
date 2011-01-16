@@ -2,8 +2,6 @@
 
 $version = textmate_detect_drupal_version();
 $basename = textmate_detect_basename($_SERVER['TM_FILEPATH']);
-// TODO this breaks javascript scope for some reason.
-//$theme_name = textmate_detect_drupal_theme();
 
 //============================================================================
 
@@ -208,18 +206,6 @@ function textmate_scan_directory($dir, $mask, $nomask = array('.', '..', 'CVS'),
   }
 
   return $files;
-}
-
-function textmate_detect_drupal_theme() {
-  if (isset($_SERVER['TM_DIRECTORY'])) {
-    // Try to find the .info file of the theme.
-    $path = explode('/', $_SERVER['TM_DIRECTORY']);
-    while (!empty($path) && empty($info_file)) {
-      $info_file = textmate_scan_directory($_SERVER['TM_DIRECTORY'], '/\.info$/', array('recurse' => FALSE));
-    }
-    $info = array_pop($info_file);
-    return $info->name;
-  }
 }
 
 function textmate_docs_for_word($function) {
