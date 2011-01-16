@@ -115,13 +115,18 @@ function textmate_detect_drupal_version() {
 }
 
 function textmate_parse_info_file($filename) {
-  $info = array();
-
   if (!file_exists($filename)) {
-    return $info;
+    return array();
   }
 
   $data = file_get_contents($filename);
+  return textmate_parse_info_format($data);
+}
+
+function textmate_parse_info_format($data) {
+  $info = array();
+  $constants = get_defined_constants();
+
   if (preg_match_all('
     @^\s*                           # Start at the beginning of a line, ignoring leading whitespace
     ((?:
@@ -159,9 +164,9 @@ function textmate_parse_info_file($filename) {
         $parent = &$parent[$key];
       }
 
-      // Handle PHP constants
-      if (defined($value)) {
-        $value = constant($value);
+      // Handle PHP constants.
+      if (isset($constants[$value])) {
+        $value = $constants[$value];
       }
 
       // Insert actual value
