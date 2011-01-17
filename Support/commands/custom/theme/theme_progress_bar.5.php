@@ -8,7 +8,7 @@
  * @return
  *   A themed HTML string representing the progress bar.
  */
-function ${1:phptemplate}_progress_bar(\$percent, \$message) {
+function <?php print $basename; ?>_progress_bar(\$percent, \$message) {
   \$output = '<div id="progress" class="progress">';
   \$output .= '<div class="percentage">'. \$percent .'%</div>';
   \$output .= '<div class="status">'. \$message .'</div>';
@@ -18,4 +18,4 @@ function ${1:phptemplate}_progress_bar(\$percent, \$message) {
   return \$output;
 }
 
-$2
+$1

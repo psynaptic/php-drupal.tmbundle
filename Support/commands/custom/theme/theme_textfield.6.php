@@ -9,7 +9,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_textfield(\$element) {
+function <?php print $basename; ?>_textfield(\$element) {
   \$size = empty(\$element['#size']) ? '' : ' size="'. \$element['#size'] .'"';
   \$maxlength = empty(\$element['#maxlength']) ? '' : ' maxlength="'. \$element['#maxlength'] .'"';
   \$class = array('form-text');
@@ -36,4 +36,4 @@ function ${1:phptemplate}_textfield(\$element) {
   return theme('form_element', \$element, \$output) . \$extra;
 }
 
-$2
+$1

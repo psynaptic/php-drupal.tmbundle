@@ -7,8 +7,8 @@
  * @return
  *   A themed HTML string representing the form item.
  */
-function ${1:phptemplate}_item(\$element) {
+function <?php print $basename; ?>_item(\$element) {
   return theme('form_element', \$element, \$element['#value'] . \$element['#children']);
 }
 
-$2
+$1

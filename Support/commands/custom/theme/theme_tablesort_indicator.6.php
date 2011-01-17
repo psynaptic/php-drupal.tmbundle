@@ -6,7 +6,7 @@
  * @return
  *   A themed sort icon.
  */
-function ${1:phptemplate}_tablesort_indicator(\$style) {
+function <?php print $basename; ?>_tablesort_indicator(\$style) {
   if (\$style == "asc") {
     return theme('image', 'misc/arrow-asc.png', t('sort icon'), t('sort ascending'));
   }
@@ -15,4 +15,4 @@ function ${1:phptemplate}_tablesort_indicator(\$style) {
   }
 }
 
-$2
+$1

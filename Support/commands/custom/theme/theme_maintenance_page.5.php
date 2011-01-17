@@ -1,4 +1,4 @@
-function ${1:phptemplate}_maintenance_page(\$content, \$messages = TRUE, \$partial = FALSE) {
+function <?php print $basename; ?>_maintenance_page(\$content, \$messages = TRUE, \$partial = FALSE) {
   drupal_set_header('Content-Type: text/html; charset=utf-8');
   drupal_set_html_head('<style type="text/css" media="all">@import "'. base_path() .'misc/maintenance.css";</style>');
   drupal_set_html_head('<style type="text/css" media="all">@import "'. base_path() . drupal_get_path('module', 'system') .'/defaults.css";</style>');
@@ -30,4 +30,4 @@ function ${1:phptemplate}_maintenance_page(\$content, \$messages = TRUE, \$parti
   return \$output;
 }
 
-$2
+$1

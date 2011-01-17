@@ -10,8 +10,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_item(\$mid, \$children = '', \$leaf = TRUE) {
+function <?php print $basename; ?>_menu_item(\$mid, \$children = '', \$leaf = TRUE) {
   return '<li class="'. (\$leaf ? 'leaf' : (\$children ? 'expanded' : 'collapsed')) .'">'. menu_item_link(\$mid) . \$children ."</li>\n";
 }
 
-$2
+$1

@@ -7,7 +7,7 @@
  * @return
  *   A themed HTML string representing the form item group.
  */
-function ${1:phptemplate}_fieldset(\$element) {
+function <?php print $basename; ?>_fieldset(\$element) {
   if (\$element['#collapsible']) {
     drupal_add_js('misc/collapse.js');
 
@@ -24,4 +24,4 @@ function ${1:phptemplate}_fieldset(\$element) {
   return '<fieldset' . drupal_attributes(\$element['#attributes']) .'>' . (\$element['#title'] ? '<legend>'. \$element['#title'] .'</legend>' : '') . (\$element['#description'] ? '<div class="description">'. \$element['#description'] .'</div>' : '') . \$element['#children'] . \$element['#value'] . "</fieldset>\n";
 }
 
-$2
+$1

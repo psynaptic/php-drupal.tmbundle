@@ -4,8 +4,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_taxonomy_term_select(\$element) {
+function <?php print $basename; ?>_taxonomy_term_select(\$element) {
   return theme('select', \$element);
 }
 
-$2
+$1

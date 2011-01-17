@@ -8,7 +8,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_taxonomy_term_page(\$tids, \$result) {
+function <?php print $basename; ?>_taxonomy_term_page(\$tids, \$result) {
   drupal_add_css(drupal_get_path('module', 'taxonomy') .'/taxonomy.css');
 
   \$output = '';
@@ -31,4 +31,4 @@ function ${1:phptemplate}_taxonomy_term_page(\$tids, \$result) {
   return \$output;
 }
 
-$2
+$1

@@ -7,9 +7,9 @@
  * @return
  *   A string containing the results of the hook_footer() calls.
  */
-function ${1:phptemplate}_closure(\$main = 0) {
+function <?php print $basename; ?>_closure(\$main = 0) {
   \$footer = module_invoke_all('footer', \$main);
   return implode("\n", \$footer) . drupal_get_js('footer');
 }
 
-$2
+$1

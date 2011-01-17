@@ -4,7 +4,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_local_tasks() {
+function <?php print $basename; ?>_menu_local_tasks() {
   \$output = '';
 
   if (\$primary = menu_primary_local_tasks()) {
@@ -17,4 +17,4 @@ function ${1:phptemplate}_menu_local_tasks() {
   return \$output;
 }
 
-$2
+$1

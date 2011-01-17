@@ -10,9 +10,9 @@
  * @return
  *   A string containing the box output.
  */
-function ${1:phptemplate}_box(\$title, \$content, \$region = 'main') {
+function <?php print $basename; ?>_box(\$title, \$content, \$region = 'main') {
   \$output = '<h2 class="title">'. \$title .'</h2><div>'. \$content .'</div>';
   return \$output;
 }
 
-$2
+$1

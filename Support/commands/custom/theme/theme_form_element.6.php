@@ -11,7 +11,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_form_element(\$element, \$value) {
+function <?php print $basename; ?>_form_element(\$element, \$value) {
   // This is also used in the installer, pre-database setup.
   \$t = get_t();
 
@@ -43,4 +43,4 @@ function ${1:phptemplate}_form_element(\$element, \$value) {
   return \$output;
 }
 
-$2
+$1

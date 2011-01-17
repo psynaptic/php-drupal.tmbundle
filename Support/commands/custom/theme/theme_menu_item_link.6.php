@@ -3,7 +3,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_item_link(\$link) {
+function <?php print $basename; ?>_menu_item_link(\$link) {
   if (empty(\$link['localized_options'])) {
     \$link['localized_options'] = array();
   }
@@ -11,4 +11,4 @@ function ${1:phptemplate}_menu_item_link(\$link) {
   return l(\$link['title'], \$link['href'], \$link['localized_options']);
 }
 
-$2
+$1

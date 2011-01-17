@@ -10,7 +10,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_local_task(\$mid, \$active, \$primary) {
+function <?php print $basename; ?>_menu_local_task(\$mid, \$active, \$primary) {
   if (\$active) {
     return '<li class="active">'. menu_item_link(\$mid) ."</li>\n";
   }
@@ -19,4 +19,4 @@ function ${1:phptemplate}_menu_local_task(\$mid, \$active, \$primary) {
   }
 }
 
-$2
+$1

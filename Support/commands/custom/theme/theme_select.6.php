@@ -13,7 +13,7 @@
  * \$options to an associative array in which the keys are group labels, and the
  * values are associative arrays in the normal \$options format.
  */
-function ${1:phptemplate}_select(\$element) {
+function <?php print $basename; ?>_select(\$element) {
   \$select = '';
   \$size = \$element['#size'] ? ' size="'. \$element['#size'] .'"' : '';
   _form_set_class(\$element, array('form-select'));
@@ -21,4 +21,4 @@ function ${1:phptemplate}_select(\$element) {
   return theme('form_element', \$element, '<select name="'. \$element['#name'] .''. (\$multiple ? '[]' : '') .'"'. (\$multiple ? ' multiple="multiple" ' : '') . drupal_attributes(\$element['#attributes']) .' id="'. \$element['#id'] .'" '. \$size .'>'. form_select_options(\$element) .'</select>');
 }
 
-$2
+$1

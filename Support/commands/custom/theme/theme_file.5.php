@@ -17,7 +17,7 @@
  * For assistance with handling the uploaded file correctly, see the API
  * provided by file.inc.
  */
-function ${1:phptemplate}_file(\$element) {
+function <?php print $basename; ?>_file(\$element) {
   _form_set_class(\$element, array('form-file'));
   return theme('form_element', \$element, '<input type="file" name="'. \$element['#name'] .'"'. (\$element['#attributes'] ? ' '. drupal_attributes(\$element['#attributes']) : '') .' id="'. \$element['#id'] .'" size="'. \$element['#size'] ."\" />\n");
 }

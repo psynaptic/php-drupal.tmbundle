@@ -7,8 +7,8 @@
  * @return
  *   A themed HTML string representing the date selection boxes.
  */
-function ${1:phptemplate}_date(\$element) {
+function <?php print $basename; ?>_date(\$element) {
   return theme('form_element', \$element, '<div class="container-inline">'. \$element['#children'] .'</div>');
 }
 
-$2
+$1

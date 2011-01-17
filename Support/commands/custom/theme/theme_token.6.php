@@ -3,8 +3,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_token(\$element) {
+function <?php print $basename; ?>_token(\$element) {
   return theme('hidden', \$element);
 }
 
-$2
+$1

@@ -8,7 +8,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_checkboxes(\$element) {
+function <?php print $basename; ?>_checkboxes(\$element) {
   \$class = 'form-checkboxes';
   if (isset(\$element['#attributes']['class'])) {
     \$class .= ' '. \$element['#attributes']['class'];
@@ -23,4 +23,4 @@ function ${1:phptemplate}_checkboxes(\$element) {
   }
 }
 
-$2
+$1

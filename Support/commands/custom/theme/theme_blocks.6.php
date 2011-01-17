@@ -6,7 +6,7 @@
  * @return
  *   A string containing the themed blocks for this region.
  */
-function ${1:phptemplate}_blocks(\$region) {
+function <?php print $basename; ?>_blocks(\$region) {
   \$output = '';
 
   if (\$list = block_list(\$region)) {
@@ -22,4 +22,4 @@ function ${1:phptemplate}_blocks(\$region) {
   return \$output;
 }
 
-$2
+$1

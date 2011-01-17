@@ -6,10 +6,10 @@
  * @param \$title
  *   A descriptive title of the feed.
   */
-function ${1:phptemplate}_feed_icon(\$url, \$title) {
+function <?php print $basename; ?>_feed_icon(\$url, \$title) {
   if (\$image = theme('image', 'misc/feed.png', t('Syndicate content'), \$title)) {
     return '<a href="'. check_url(\$url) .'" class="feed-icon">'. \$image .'</a>';
   }
 }
 
-$2
+$1

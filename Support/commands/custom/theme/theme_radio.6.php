@@ -9,7 +9,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_radio(\$element) {
+function <?php print $basename; ?>_radio(\$element) {
   _form_set_class(\$element, array('form-radio'));
   \$output = '<input type="radio" ';
   \$output .= 'id="'. \$element['#id'] .'" ';
@@ -25,4 +25,4 @@ function ${1:phptemplate}_radio(\$element) {
   return theme('form_element', \$element, \$output);
 }
 
-$2
+$1

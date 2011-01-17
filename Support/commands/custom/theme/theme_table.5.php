@@ -41,7 +41,7 @@
  * @return
  *   An HTML string representing the table.
  */
-function ${1:phptemplate}_table(\$header, \$rows, \$attributes = array(), \$caption = NULL) {
+function <?php print $basename; ?>_table(\$header, \$rows, \$attributes = array(), \$caption = NULL) {
   \$output = '<table'. drupal_attributes(\$attributes) .">\n";
 
   if (isset(\$caption)) {
@@ -106,4 +106,4 @@ function ${1:phptemplate}_table(\$header, \$rows, \$attributes = array(), \$capt
   return \$output;
 }
 
-$2
+$1

@@ -7,7 +7,7 @@
 * @return
 *   A themed HTML string representing the form.
 */
-function ${1:phptemplate}_password(\$element) {
+function <?php print $basename; ?>_password(\$element) {
   \$size = \$element['#size'] ? ' size="'. \$element['#size'] .'" ' : '';
   \$maxlength = \$element['#maxlength'] ? ' maxlength="'. \$element['#maxlength'] .'" ' : '';
 
@@ -16,4 +16,4 @@ function ${1:phptemplate}_password(\$element) {
   return theme('form_element', \$element, \$output);
 }
 
-$2
+$1

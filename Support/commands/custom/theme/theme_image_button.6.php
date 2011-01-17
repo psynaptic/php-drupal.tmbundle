@@ -3,7 +3,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_image_button(\$element) {
+function <?php print $basename; ?>_image_button(\$element) {
   // Make sure not to overwrite classes.
   if (isset(\$element['#attributes']['class'])) {
     \$element['#attributes']['class'] = 'form-'. \$element['#button_type'] .' '. \$element['#attributes']['class'];
@@ -21,4 +21,4 @@ function ${1:phptemplate}_image_button(\$element) {
     "/>\n";
 }
 
-$2
+$1

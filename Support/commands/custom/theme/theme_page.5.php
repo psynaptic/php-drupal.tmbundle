@@ -6,7 +6,7 @@
  * @return
  *   A string containing the entire HTML page.
  */
-function ${1:phptemplate}_page(\$content) {
+function <?php print $basename; ?>_page(\$content) {
   // Get blocks before so that they can alter the header (JavaScript, Stylesheets etc.)
   \$blocks = theme('blocks', 'all');
 
@@ -48,4 +48,4 @@ function ${1:phptemplate}_page(\$content) {
   return \$output;
 }
 
-$2
+$1

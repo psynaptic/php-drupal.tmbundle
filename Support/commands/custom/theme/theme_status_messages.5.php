@@ -8,7 +8,7 @@
  * @return
  *   A string containing the messages.
  */
-function ${1:phptemplate}_status_messages(\$display = NULL) {
+function <?php print $basename; ?>_status_messages(\$display = NULL) {
   \$output = '';
   foreach (drupal_get_messages(\$display) as \$type => \$messages) {
     \$output .= "<div class=\"messages \$type\">\n";
@@ -27,4 +27,4 @@ function ${1:phptemplate}_status_messages(\$display = NULL) {
   return \$output;
 }
 
-$2
+$1

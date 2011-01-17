@@ -4,7 +4,7 @@
  * @ingroup themeable
  * @see taxonomy_overview_vocabularies()
  */
-function ${1:phptemplate}_taxonomy_overview_vocabularies(\$form) {
+function <?php print $basename; ?>_taxonomy_overview_vocabularies(\$form) {
   \$rows = array();
   foreach (element_children(\$form) as \$key) {
     if (isset(\$form[\$key]['name'])) {
@@ -36,4 +36,4 @@ function ${1:phptemplate}_taxonomy_overview_vocabularies(\$form) {
   return theme('table', \$header, \$rows, array('id' => 'taxonomy')) . drupal_render(\$form);
 }
 
-$2
+$1

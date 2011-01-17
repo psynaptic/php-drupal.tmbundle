@@ -3,8 +3,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_tree(\$tree) {
+function <?php print $basename; ?>_menu_tree(\$tree) {
   return '<ul class="menu">'. \$tree .'</ul>';
 }
 
-$2
+$1

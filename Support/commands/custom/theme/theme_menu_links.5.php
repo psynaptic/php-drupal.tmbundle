@@ -14,7 +14,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_menu_links(\$links) {
+function <?php print $basename; ?>_menu_links(\$links) {
   if (!count(\$links)) {
     return '';
   }
@@ -33,4 +33,4 @@ function ${1:phptemplate}_menu_links(\$links) {
   return \$output;
 }
 
-$2
+$1

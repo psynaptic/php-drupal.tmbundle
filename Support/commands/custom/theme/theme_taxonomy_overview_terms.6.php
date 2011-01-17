@@ -4,7 +4,7 @@
  * @ingroup themeable
  * @see taxonomy_overview_terms()
  */
-function ${1:phptemplate}_taxonomy_overview_terms(\$form) {
+function <?php print $basename; ?>_taxonomy_overview_terms(\$form) {
   \$page_increment  = \$form['#page_increment'];
   \$page_entries    = \$form['#page_entries'];
   \$back_peddle     = \$form['#back_peddle'];
@@ -84,4 +84,4 @@ function ${1:phptemplate}_taxonomy_overview_terms(\$form) {
   return \$output;
 }
 
-$2
+$1

@@ -9,8 +9,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_password_confirm(\$element) {
+function <?php print $basename; ?>_password_confirm(\$element) {
   return theme('form_element', \$element, \$element['#children']);
 }
 
-$2
+$1

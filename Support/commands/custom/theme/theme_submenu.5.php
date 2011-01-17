@@ -4,8 +4,8 @@
  * @param \$links
  *   An array of links.
  */
-function ${1:phptemplate}_submenu(\$links) {
+function <?php print $basename; ?>_submenu(\$links) {
   return '<div class="submenu">'. implode(' | ', \$links) .'</div>';
 }
 
-$2
+$1

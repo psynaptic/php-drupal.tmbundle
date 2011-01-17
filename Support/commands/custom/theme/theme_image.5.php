@@ -14,7 +14,7 @@
  * @return
  *   A string containing the image tag.
  */
-function ${1:phptemplate}_image(\$path, \$alt = '', \$title = '', \$attributes = NULL, \$getsize = TRUE) {
+function <?php print $basename; ?>_image(\$path, \$alt = '', \$title = '', \$attributes = NULL, \$getsize = TRUE) {
   if (!\$getsize || (is_file(\$path) && (list(\$width, \$height, \$type, \$image_attributes) = @getimagesize(\$path)))) {
     \$attributes = drupal_attributes(\$attributes);
     \$url = (url(\$path) == \$path) ? \$path : (base_path() . \$path);
@@ -22,4 +22,4 @@ function ${1:phptemplate}_image(\$path, \$alt = '', \$title = '', \$attributes =
   }
 }
 
-$2
+$1

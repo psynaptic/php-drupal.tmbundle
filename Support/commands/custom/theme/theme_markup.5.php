@@ -9,8 +9,8 @@
  * @return
  *   A themed HTML string representing the HTML markup.
  */
-function ${1:phptemplate}_markup(\$element) {
+function <?php print $basename; ?>_markup(\$element) {
   return (isset(\$element['#value']) ? \$element['#value'] : '') . (isset(\$element['#children']) ? \$element['#children'] : '');
 }
 
-$2
+$1

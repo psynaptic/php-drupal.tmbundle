@@ -7,8 +7,8 @@
  * @return
  *   The formatted text (html).
  */
-function ${1:phptemplate}_placeholder(\$text) {
+function <?php print $basename; ?>_placeholder(\$text) {
   return '<em>'. check_plain(\$text) .'</em>';
 }
 
-$2
+$1

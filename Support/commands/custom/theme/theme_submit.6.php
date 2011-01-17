@@ -3,8 +3,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_submit(\$element) {
+function <?php print $basename; ?>_submit(\$element) {
   return theme('button', \$element);
 }
 
-$2
+$1

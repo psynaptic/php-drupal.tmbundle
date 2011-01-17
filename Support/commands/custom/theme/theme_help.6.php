@@ -3,10 +3,10 @@
  *
  * @return a string containing the helptext for the current page.
  */
-function ${1:phptemplate}_help() {
+function <?php print $basename; ?>_help() {
   if (\$help = menu_get_active_help()) {
     return '<div class="help">'. \$help .'</div>';
   }
 }
 
-$2
+$1

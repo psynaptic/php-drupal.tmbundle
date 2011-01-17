@@ -7,7 +7,7 @@
  * @return
  *   A themed HTML string representing the form item group.
  */
-function ${1:phptemplate}_radio(\$element) {
+function <?php print $basename; ?>_radio(\$element) {
   _form_set_class(\$element, array('form-radio'));
   \$output = '<input type="radio" ';
   \$output .= 'name="' . \$element['#name'] .'" ';
@@ -22,4 +22,4 @@ function ${1:phptemplate}_radio(\$element) {
   return theme('form_element', \$element, \$output);
 }
 
-$2
+$1

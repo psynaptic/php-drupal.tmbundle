@@ -9,7 +9,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_checkbox(\$element) {
+function <?php print $basename; ?>_checkbox(\$element) {
   _form_set_class(\$element, array('form-checkbox'));
   \$checkbox = '<input ';
   \$checkbox .= 'type="checkbox" ';
@@ -27,4 +27,4 @@ function ${1:phptemplate}_checkbox(\$element) {
   return theme('form_element', \$element, \$checkbox);
 }
 
-$2
+$1

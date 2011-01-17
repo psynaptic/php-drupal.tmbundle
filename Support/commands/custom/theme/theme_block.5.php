@@ -13,7 +13,7 @@
  * @return
  *   A string containing the block output.
  */
-function ${1:phptemplate}_block(\$block) {
+function <?php print $basename; ?>_block(\$block) {
   \$output  = "<div class=\"block block-\$block->module\" id=\"block-\$block->module-\$block->delta\">\n";
   \$output .= " <h2 class=\"title\">\$block->subject</h2>\n";
   \$output .= " <div class=\"content\">\$block->content</div>\n";
@@ -21,4 +21,4 @@ function ${1:phptemplate}_block(\$block) {
   return \$output;
 }
 
-$2
+$1

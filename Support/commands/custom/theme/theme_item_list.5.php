@@ -16,7 +16,7 @@
  * @return
  *   A string containing the list output.
  */
-function ${1:phptemplate}_item_list(\$items = array(), \$title = NULL, \$type = 'ul', \$attributes = NULL) {
+function <?php print $basename; ?>_item_list(\$items = array(), \$title = NULL, \$type = 'ul', \$attributes = NULL) {
   \$output = '<div class="item-list">';
   if (isset(\$title)) {
     \$output .= '<h3>'. \$title .'</h3>';
@@ -54,4 +54,4 @@ function ${1:phptemplate}_item_list(\$items = array(), \$title = NULL, \$type = 
   return \$output;
 }
 
-$2
+$1

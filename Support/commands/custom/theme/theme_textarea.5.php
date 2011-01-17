@@ -7,7 +7,7 @@
  * @return
  *   A themed HTML string representing the textarea.
  */
-function ${1:phptemplate}_textarea(\$element) {
+function <?php print $basename; ?>_textarea(\$element) {
   \$class = array('form-textarea');
   if (\$element['#resizable'] !== FALSE) {
     drupal_add_js('misc/textarea.js');
@@ -19,4 +19,4 @@ function ${1:phptemplate}_textarea(\$element) {
   return theme('form_element', \$element, '<textarea'. \$cols .' rows="'. \$element['#rows'] .'" name="'. \$element['#name'] .'" id="'. \$element['#id'] .'" '. drupal_attributes(\$element['#attributes']) .'>'. check_plain(\$element['#value']) .'</textarea>');
 }
 
-$2
+$1

@@ -7,7 +7,7 @@
  * @return
  *   A themed HTML string representing the textfield.
  */
-function ${1:phptemplate}_textfield(\$element) {
+function <?php print $basename; ?>_textfield(\$element) {
   \$size = \$element['#size'] ? ' size="' . \$element['#size'] . '"' : '';
   \$class = array('form-text');
   \$extra = '';
@@ -33,4 +33,4 @@ function ${1:phptemplate}_textfield(\$element) {
   return theme('form_element', \$element, \$output). \$extra;
 }
 
-$2
+$1

@@ -9,8 +9,8 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_item(\$element) {
+function <?php print $basename; ?>_item(\$element) {
   return theme('form_element', \$element, \$element['#value'] . (!empty(\$element['#children']) ? \$element['#children'] : ''));
 }
 
-$2
+$1

@@ -8,7 +8,7 @@
  * @return
  *   A string containing the marker.
  */
-function ${1:phptemplate}_mark(\$type = MARK_NEW) {
+function <?php print $basename; ?>_mark(\$type = MARK_NEW) {
   global \$user;
   if (\$user->uid) {
     if (\$type == MARK_NEW) {
@@ -20,4 +20,4 @@ function ${1:phptemplate}_mark(\$type = MARK_NEW) {
   }
 }
 
-$2
+$1

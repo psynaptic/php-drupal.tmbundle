@@ -9,7 +9,7 @@
  * @return
  *   A string representing the form element.
  */
-function ${1:phptemplate}_form_element(\$element, \$value) {
+function <?php print $basename; ?>_form_element(\$element, \$value) {
   \$output  = '<div class="form-item">'."\n";
   \$required = !empty(\$element['#required']) ? '<span class="form-required" title="'. t('This field is required.') .'">*</span>' : '';
 
@@ -34,4 +34,4 @@ function ${1:phptemplate}_form_element(\$element, \$value) {
   return \$output;
 }
 
-$2
+$1

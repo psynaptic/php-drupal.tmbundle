@@ -9,7 +9,7 @@
  *
  * @ingroup themeable
  */
-function ${1:phptemplate}_textarea(\$element) {
+function <?php print $basename; ?>_textarea(\$element) {
   \$class = array('form-textarea');
 
   // Add teaser behavior (must come before resizable)
@@ -31,4 +31,4 @@ function ${1:phptemplate}_textarea(\$element) {
   return theme('form_element', \$element, '<textarea cols="'. \$element['#cols'] .'" rows="'. \$element['#rows'] .'" name="'. \$element['#name'] .'" id="'. \$element['#id'] .'" '. drupal_attributes(\$element['#attributes']) .'>'. check_plain(\$element['#value']) .'</textarea>');
 }
 
-$2
+$1
