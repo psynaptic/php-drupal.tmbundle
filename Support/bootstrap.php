@@ -217,13 +217,15 @@ function textmate_detect_drupal_theme() {
 }
 
 function textmate_docs_for_word($function) {
-  global $basename;
-  global $version;
+  $settings = textmate_detect_settings($_SERVER['TM_FILEPATH']);
+  $basename = $settings['basename']['value'];
+  $version = $settings['version']['value'];
 
   if (strpos($_ENV['TM_DRUPAL_API'], 'drupalcontrib.org') !== FALSE) {  
     $suggestions = array();
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'hook_', $function, 1);
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'theme_', $function, 1);
+    $suggestions[] = preg_replace('/\A' . $basename .'_/', 'template_', $function, 1);
     $suggestions[] = $function;
   
     $suggestions = array_unique($suggestions);
