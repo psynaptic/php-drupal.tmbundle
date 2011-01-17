@@ -3,7 +3,7 @@
 The PHP Drupal bundle provides Drupal developers with shortcuts for creating Drupal modules and themes.
 
 - Supports Drupal 5, 6 and 7
-- Hook snippets (complete list of core hooks for Durpal 6 and 7, incomplete for Drupal 5)
+- Hook snippets (complete list of core hooks for Drupal 6 and 7, incomplete for Drupal 5)
 - Hook completion (the same as can be found in the PHP bundle)
 - Automatic detection of Drupal version when .info file is discoverable
 - Theme and preprocess functions
