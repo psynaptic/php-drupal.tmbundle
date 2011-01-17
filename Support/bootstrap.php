@@ -227,5 +227,5 @@ function textmate_docs_for_word($function) {
   
   $suggestions = array_unique($suggestions);
   
-  return $_ENV['TM_DRUPAL_API'] . 'textmate_api/search/' . $version . '/' . implode('/', $suggestions);
+  return $_ENV['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);
 }
