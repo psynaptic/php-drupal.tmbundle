@@ -4,7 +4,7 @@
  * @param \$variables
  *   An array of variables to pass to the theme template.
  */
-function <?php print $theme_name; ?>_preprocess_comment(&\$variables) {
+function <?php print $basename; ?>_preprocess_comment(&\$variables) {
   \$comment = \$variables['comment'];$2
 }
 

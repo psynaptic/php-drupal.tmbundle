@@ -88,6 +88,7 @@ function textmate_find_command($name) {
 
   elseif (strpos($name, 'template_preprocess_') === 0) {
     $folder = 'preprocess/';
+    $fallback = 'template';
   }
 
   elseif (strpos($name, 'schema_') === 0) {
