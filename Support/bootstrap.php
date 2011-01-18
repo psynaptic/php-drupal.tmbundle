@@ -1,8 +1,8 @@
 <?php
 
 $basename = 'hook';
-if (isset($_ENV['TM_DRUPAL_VERSION'])) {
- $version = $_ENV['TM_DRUPAL_VERSION']; 
+if (isset($_SERVER['TM_DRUPAL_VERSION'])) {
+ $version = $_SERVER['TM_DRUPAL_VERSION']; 
 }
 
 function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NULL) {
@@ -13,7 +13,7 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
     ),
     'version' => array(
       'default' => TRUE,
-      'value' => ($_version == NULL) ? $_ENV['TM_DRUPAL_VERSION'] : $_version,
+      'value' => ($_version == NULL) ? $_SERVER['TM_DRUPAL_VERSION'] : $_version,
     ),
   );
   
@@ -60,7 +60,7 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
 }
 
 function textmate_find_command($name) {
-  if ((!isset($_ENV['TM_DRUPAL_VERSION']) || !isset($_ENV['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
+  if ((!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
     return $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/not_installed_properly.php';
   }
 
@@ -235,7 +235,7 @@ function textmate_docs_for_word($function) {
   $basename = $settings['basename']['value'];
   $version = $settings['version']['value'];
 
-  if (strpos($_ENV['TM_DRUPAL_API'], 'drupalcontrib.org') !== FALSE) {  
+  if (strpos($_SERVER['TM_DRUPAL_API'], 'drupalcontrib.org') !== FALSE) {  
     $suggestions = array();
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'hook_', $function, 1);
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'theme_', $function, 1);
@@ -243,8 +243,8 @@ function textmate_docs_for_word($function) {
     $suggestions[] = $function;
   
     $suggestions = array_unique($suggestions);
-    return $_ENV['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);    
+    return $_SERVER['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);    
   }
   
-  return $_ENV['TM_DRUPAL_API'] . '/api/search/' . $version . '/' . $function;    
+  return $_SERVER['TM_DRUPAL_API'] . '/api/search/' . $version . '/' . $function;    
 }
