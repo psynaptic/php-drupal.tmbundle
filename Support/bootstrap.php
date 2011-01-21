@@ -63,6 +63,8 @@ function textmate_find_command($name) {
   if ((!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
     return $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/not_installed_properly.php';
   }
+  
+  $fallback = NULL;
 
   if (strpos($name, 'theme_') === 0) {
     $folder = 'theme/';
