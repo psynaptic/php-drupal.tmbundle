@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
+include textmate_find_command('theme_aggregator_block_item');
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>theme_aggregator_block_item</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>tabTrigger</key>
+	<string>theme_aggregator_block_item</string>
+	<key>uuid</key>
+	<string>ACE8E79D-E069-4125-B3C7-FEF93DC67E35</string>
+</dict>
+</plist>
