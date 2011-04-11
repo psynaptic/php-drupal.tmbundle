@@ -80,6 +80,10 @@ function textmate_find_command($name) {
     $folder = 'drupal/';
   }
 
+  elseif (strpos($name, 'js_') === 0) {
+    $folder = 'js/';
+  }
+
   elseif (strpos($name, 'content_') === 0) {
     $folder = 'cck/';
   }
