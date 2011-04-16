@@ -5,13 +5,8 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby -wKU
-require ENV['TM_SUPPORT_PATH'] + '/lib/osx/plist'
-require ENV['TM_SUPPORT_PATH'] + '/lib/ui'
-
-choices = OSX::PropertyList.load(File.read(ENV['TM_BUNDLE_SUPPORT'] + '/functions.plist'))
-TextMate::UI.complete(choices, :initial_filter =&gt; ENV['TM_CURRENT_WORD'], :extra_chars =&gt; '_')
-</string>
+	<string>#!/bin/sh
+/usr/bin/env ruby -KU -- "$TM_BUNDLE_SUPPORT/hook_completion.rb"</string>
 	<key>fallbackInput</key>
 	<string>word</string>
 	<key>input</key>
