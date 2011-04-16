@@ -8,11 +8,10 @@ if !ENV['TM_DRUPAL_VERSION']
   print 'The PHP Drupal Bundle is not installed properly. Press ⌃H for instructions.'
 else
   version = ENV['TM_DRUPAL_VERSION']
-
   while !path.empty?
-    folder_info = Dir[path.join('/') + '/*.info']
+    folder_info = Dir[path.join('/') + '/*.info', path.join('/') + '/modules/system/system.info']
     if !folder_info.empty?
-      core = Ini.new(folder_info.first)
+      core = Ini.new(folder_info.first, false)
       if core["core"] != nil
         version = core["core"].split('.').first.tr('"\'', '')
       end
