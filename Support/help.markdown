@@ -121,7 +121,7 @@ Tab stops have been used to allow you to edit the details.
 
 Snippets files for hooks are generated from Drupal's codebase using a [drush script](https://github.com/webflo/drush_textmate/blob/master/textmate.drush.inc). These files are stored in `php-drupal.tmbundle/Support/commands/generated/hooks`.
 
-Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/custom/hooks`.
+Some hooks have custom tab stops set up for them, these files are stored in `php-drupal.tmbundle/Support/commands/overrides/hooks`.
 
 Any snippets that don't have custom tab stops will just have the function body selected, allowing you to delete and quickly get down to writing your own function body. However, for some of the more common functions, you may find this isn't enough for your needs and might want to create custom snippets with tab stops to help speed up your workflow.
 
@@ -151,7 +151,7 @@ The two main methods for creating snippets is outlined below.
 
 If you find you need a different structure for an existing snippet you can copy the original file to a specific directory and make your desired changes there. This will automatically override the generated file from that point on.
 
-1. Copy the original file from `php-drupal.tmbundle/Support/commands/generated/hooks` to `php-drupal.tmbundle/Support/commands/custom/hooks`.
+1. Copy the original file from `php-drupal.tmbundle/Support/commands/generated/hooks` to `php-drupal.tmbundle/Support/commands/overrides/hooks`.
 
 2. Either write your own function body or if you are happy with the existing one you can use that.
 
@@ -161,7 +161,7 @@ If you find you need a different structure for an existing snippet you can copy 
 
 5. If this is a whole function snippet, leave a blank newline after the closing brace and add a final tab stop at the bottom of the file (on the last line).
 
-6. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+6. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/overrides` directory.
 
 Your new snippet should now override the generated one and you can continue working.
 
@@ -183,7 +183,7 @@ The basic workflow is as follows:
 
 6. If this is a whole function snippet, leave a blank newline after the closing brace and add a final tab stop at the bottom of the file (on the last line).
 
-7. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/custom` directory.
+7. Save the file to the correct place in the `php-drupal.tmbundle/Support/commands/overrides` directory.
 
 8. Copy one of the existing commands in the Bundle Editor and adjust the parameter for textmate\_find_command to the correct value.
 
