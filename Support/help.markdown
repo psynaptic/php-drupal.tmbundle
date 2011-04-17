@@ -42,35 +42,26 @@ Assuming you already have git installed, run the following lines in Terminal.app
     git clone git://github.com/psynaptic/php-drupal.tmbundle.git
     osascript -e 'tell app "TextMate" to reload bundles'
 
-## Set the Required Shell Variables
+## Set the optional Shell Variables
 
-There are two Shell Variables which should be set for this bundle. Shell Variables may be set up using `TextMate => Preferences => Advanced => Shell Variables`.
+There are two Shell Variables which can be set for this bundle. Shell Variables may be set up using `TextMate => Preferences => Advanced => Shell Variables`.
 
 ### Drupal version variable:
 
-The bundle automatically detects which version of Drupal you are using by checking the .info files of the project you are currently working with. It is a good idea to set up a fallback for cases where you are not using a project or something fails.
+The bundle automatically detects which version of Drupal you are using by checking the .info files of the project you are currently working with. The bundle also sets a default value for version based on the latest version of Drupal. You can override this default value if you prefer.
 
 Set the following Shell Variable:
 
 <table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
   <tr><th>variable</th><th>value</th></tr>
-  <tr><td>TM_DRUPAL_VERSION</td><td>7</td></tr>
+  <tr><td>TM_DRUPAL_VERSION</td><td>5</td></tr>
 </table>
-
-You can change this variable when switching between projects or alternatively you may wish to set up a [Project Dependent Variable](http://manual.macromates.com/en/environment_variables.html).
 
 ### API location variable:
 
 The `Documentation for Word` command performs a documentation lookup for any Drupal functions. 
 
-Set the following Shell Variable:
-
-<table border="1" cellspacing="0" cellpadding="5" style="text-align:left">
-  <tr><th>variable</th><th>value</th></tr>
-  <tr><td>TM_DRUPAL_API</td><td>http://api.drupal.org</td></tr>
-</table>
-
-Using http://api.drupal.org will currently only give you reference documentation for Drupal core functions. If you wish to be able to retrieve reference documentation for Drupal's most popular contributed modules as well, use the following settings instead:
+By default the value for this variable is set to http://api.drupal.org which will currently only give you reference documentation for Drupal core functions. If you wish to be able to retrieve reference documentation for Drupal's most popular contributed modules as well, use the following settings instead:
 
 <table border="1" cellspacing="0" cellpadding="5" style="text-align:left;">
   <tr><th>variable</th><th>value</th></tr>
