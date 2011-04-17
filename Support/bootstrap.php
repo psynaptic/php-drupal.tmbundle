@@ -19,19 +19,19 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
       'value' => ($_version == NULL) ? $_SERVER['TM_DRUPAL_VERSION'] : $_version,
     ),
   );
-  
+
   $nomask = array('.', '..', 'CVS');
   $path = explode('/', dirname($filepath));
-  
+
   while($path) {
     if ($file = textmate_scan_directory(implode('/', $path), "/.*\.info$/", $nomask, 0, FALSE)) {
       $file = array_shift($file);
-      
+
       if (isset($file->name) && $settings['basename']['default'] == TRUE) {
         $settings['basename']['value'] = $file->name;
         $settings['basename']['default'] = FALSE;
       }
-      
+
       // search [module].info file
       if ($settings['version']['default'] == TRUE) {
         $info = textmate_parse_info_file($file->filename);
@@ -41,7 +41,7 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
         }
       }
     }
-    
+
     // search system.info file in drupal core
     if ($settings['version']['default'] == TRUE) {
       $info = textmate_parse_info_file(implode('/', $path) . '/modules/system/system.info');
@@ -49,16 +49,16 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
         print_r($info);
         $settings['version']['value'] = (int) $info['core'];
         $settings['version']['default'] = FALSE;
-      }        
+      }
     }
-    
+
     if ($settings['basename']['default'] == FALSE && $settings['version']['default'] == FALSE) {
       return $settings;
     }
-    
+
     array_pop($path);
   }
-  
+
   return $settings;
 }
 
@@ -122,15 +122,15 @@ function textmate_find_command($name) {
   $settings = textmate_detect_settings($_SERVER['TM_FILEPATH'], $fallback);
   $basename = $GLOBALS['basename'] = $settings['basename']['value'];
   $version = $GLOBALS['version'] = $settings['version']['value'];
-  
+
   $files = array(
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/overrides/' . $folder . $version . '/' . $name . '.' . $version . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . $version . '/' . $name . '.' . $version . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/overrides/' . $folder . '/' . $name . '.php',
     $_SERVER['TM_BUNDLE_SUPPORT'] . '/commands/generated/' . $folder . '/' . $name . '.php',
-    $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/does_not_exist.php',
+    $_SERVER['TM_BUNDLE_SUPPORT'] . '/does_not_exist.php',
   );
-  
+
   foreach ($files as $file)
     if (file_exists($file))
       return $file;
@@ -240,16 +240,16 @@ function textmate_docs_for_word($function) {
   $basename = $settings['basename']['value'];
   $version = $settings['version']['value'];
 
-  if (strpos($_SERVER['TM_DRUPAL_API'], 'drupalcontrib.org') !== FALSE) {  
+  if (strpos($_SERVER['TM_DRUPAL_API'], 'drupalcontrib.org') !== FALSE) {
     $suggestions = array();
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'hook_', $function, 1);
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'theme_', $function, 1);
     $suggestions[] = preg_replace('/\A' . $basename .'_/', 'template_', $function, 1);
     $suggestions[] = $function;
-  
+
     $suggestions = array_unique($suggestions);
-    return $_SERVER['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);    
+    return $_SERVER['TM_DRUPAL_API'] . '/textmate_api/search/' . $version . '/' . implode('/', $suggestions);
   }
-  
-  return $_SERVER['TM_DRUPAL_API'] . '/api/search/' . $version . '/' . $function;    
+
+  return $_SERVER['TM_DRUPAL_API'] . '/api/search/' . $version . '/' . $function;
 }

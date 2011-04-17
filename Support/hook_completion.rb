@@ -1,6 +1,6 @@
 require ENV['TM_SUPPORT_PATH'] + '/lib/osx/plist'
 require ENV['TM_SUPPORT_PATH'] + '/lib/ui'
-require ENV['TM_BUNDLE_SUPPORT'] + '/misc/ini.rb'
+require ENV['TM_BUNDLE_SUPPORT'] + '/ini.rb'
 require 'find'
 
 version = ENV['TM_DRUPAL_VERSION'] || 7
