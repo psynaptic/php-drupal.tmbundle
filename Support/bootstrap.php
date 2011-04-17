@@ -1,8 +1,11 @@
 <?php
 
 $basename = 'hook';
-if (isset($_SERVER['TM_DRUPAL_VERSION'])) {
- $version = $_SERVER['TM_DRUPAL_VERSION']; 
+if (empty($_SERVER['TM_DRUPAL_VERSION'])) {
+  $_SERVER['TM_DRUPAL_VERSION'] = '7';
+}
+if (empty($_SERVER['TM_DRUPAL_API'])) {
+  $_SERVER['TM_DRUPAL_API'] = 'http://api.drupal.org';
 }
 
 function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NULL) {
@@ -60,10 +63,6 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
 }
 
 function textmate_find_command($name) {
-  if ((!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API'])) && (!isset($_SERVER['TM_DRUPAL_VERSION']) || !isset($_SERVER['TM_DRUPAL_API']))) {
-    return $_SERVER['TM_BUNDLE_SUPPORT'] . '/misc/not_installed_properly.php';
-  }
-  
   $fallback = NULL;
 
   if (strpos($name, 'theme_') === 0) {
