@@ -40,7 +40,7 @@ If you do intend to contribute to the bundle you should probably fork the main r
 
 Assuming you already have git installed, run the following lines in Terminal.app:
 
-``` bash
+```
 cd ~/Library/Application\ Support/TextMate/Pristine\ Copy/Bundles
 git clone --branch 7.x-1.x http://git.drupal.org/project/textmate.git
 osascript -e 'tell app "TextMate" to reload bundles'
@@ -98,15 +98,15 @@ Some hooks have tab stops to make it easier to edit the inserted code. Try press
 
 Form control snippets have been added for easy form generation.
 
-<code>
+```
 $form&#x21E5;
-</code>
+```
 
 Adding more elements to the form is easy.
 
-<code>
+```
 \#description&#x21E5;
-</code>
+```
 
 Tab stops have been used to allow you to edit the details.
 
