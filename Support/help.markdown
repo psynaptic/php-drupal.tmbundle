@@ -99,7 +99,7 @@ Some hooks have tab stops to make it easier to edit the inserted code. Try press
 Form control snippets have been added for easy form generation.
 
 ```
-$form⇥;
+$form⇥
 ```
 
 Adding more elements to the form is easy.
