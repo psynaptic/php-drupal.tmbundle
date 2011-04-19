@@ -88,9 +88,9 @@ This will display all available hooks in a select list, allowing you to type cha
 
 This will display only hooks which start with `hook_form`. Once you have found the hook you need, press `⌅` (Enter) to accept the selection, then press `⇥` (Tab) to print the function into your document. You can of course use the hooks without invoking the completions menu:
 
-<code>
-hook_help&#x21E5;
-</code>
+```
+hook_help⇥
+```
 
 Some hooks have tab stops to make it easier to edit the inserted code. Try pressing tab a few times to step through the tab stops. Once you hit the bottom tab stop you will break the flow and won't be able to reverse tab back through the tab stops.
 
@@ -99,13 +99,13 @@ Some hooks have tab stops to make it easier to edit the inserted code. Try press
 Form control snippets have been added for easy form generation.
 
 ```
-$form&#x21E5;
+$form⇥;
 ```
 
 Adding more elements to the form is easy.
 
 ```
-\#description&#x21E5;
+#description⇥
 ```
 
 Tab stops have been used to allow you to edit the details.
