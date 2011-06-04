@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>if [[ ! -f "$TM_NEW_FILE" ]]; then
+   TM_YEAR=`date +%Y` \
+   TM_DATE=`date +%Y-%m-%d` \
+   perl -pe 's/\$\{([^}]*)\}/$ENV{$1}/g' \
+      &lt; template_in.txt &gt; "$TM_NEW_FILE"
+fi</string>
+	<key>extension</key>
+	<string>make</string>
+	<key>name</key>
+	<string>Drush Make</string>
+	<key>uuid</key>
+	<string>562ADC7F-9FAC-46B4-8D60-4FC88078F9C8</string>
+</dict>
+</plist>
