@@ -46,7 +46,6 @@ function textmate_detect_settings($filepath, $_basename = 'hook', $_version = NU
     if ($settings['version']['default'] == TRUE) {
       $info = textmate_parse_info_file(implode('/', $path) . '/modules/system/system.info');
       if (!empty($info['core'])) {
-        print_r($info);
         $settings['version']['value'] = (int) $info['core'];
         $settings['version']['default'] = FALSE;
       }
