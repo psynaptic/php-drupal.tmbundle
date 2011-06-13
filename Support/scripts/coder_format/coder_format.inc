@@ -1362,6 +1362,19 @@ function coder_postprocessor_if_curly_braces() {
   );
 }
 
+function coder_postprocessor_elseif_not_else_if() {
+  // Replace all "else if" statements with "elseif"
+  return array(
+    '#title'   => 'Use "elseif" in place of "else if".',
+    '#search'  => '@
+      (else)          # match an else statement followed by whitespace
+      \s+             # match whitespace
+      (if\ ?\()       # match an if statement.
+      @x',
+    '#replace' => '$1$2',
+  );
+}
+
 /**
  * @} End of "defgroup coder_postprocessor".
  */
