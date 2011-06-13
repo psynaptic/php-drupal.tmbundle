@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+require $_SERVER['TM_BUNDLE_SUPPORT'] . '/scripts/coder_format/coder_format.inc';
+
+$document = file_get_contents('php://stdin');
+
+print coder_format_string_all($document);
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@C</string>
+	<key>name</key>
+	<string>Coder format</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.php</string>
+	<key>uuid</key>
+	<string>72F07D9D-FA46-4FD8-BE6B-C98F921BC0DD</string>
+</dict>
+</plist>
