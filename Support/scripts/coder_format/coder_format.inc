@@ -330,12 +330,12 @@ function coder_format_string($code = '') {
               --$braces_in_case[$switches];
             }
             --$_coder_indent;
-            if ($braces_in_case[$switches] < 0 && $in_case) {
+            if (isset($braces_in_case[$switches]) && $braces_in_case[$switches] < 0 && $in_case) {
               // Decrease indent if last case in a switch is not terminated.
               --$_coder_indent;
               $in_case = FALSE;
             }
-            if ($braces_in_case[$switches] < 0) {
+            if (isset($braces_in_case[$switches]) && $braces_in_case[$switches] < 0) {
               $braces_in_case[$switches] = 0;
               $switches--;
             }
