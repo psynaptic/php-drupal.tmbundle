@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>debug_backtrace();</string>
+	<string>ddebug_backtrace();</string>
 	<key>name</key>
-	<string>debug_backtrace</string>
+	<string>ddebug_backtrace</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>tabTrigger</key>
