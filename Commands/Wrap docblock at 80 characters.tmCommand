@@ -6,17 +6,41 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env php
-$column = $_SERVER['TM_COLUMN_NUMBER'];
-$start_column = $_SERVER['TM_CURRENT_LINE'];
-if (strlen($column) - strlen($start_column)) {
-  print " *" . $start_column . "*";
-}</string>
+&lt;?php
+
+$doc_block = file_get_contents('php://stdin');
+
+$lines = explode("\n", $doc_block);
+
+$close = "\n " . array_pop($lines);
+$output = array_shift($lines) . "\n";
+
+foreach ($lines as $line) {
+  // Trim out some stuff:
+  $line = preg_replace(array(
+    '/^ ?\* /',   // Initial comment marker of " * "
+    '/^ */'       // Initial whitespace, as we will normalize it.
+  ), '', $line);
+  $new_lines[] = $line;
+}
+
+$long = implode(' ', $new_lines);
+$output .= ' * ' . wordwrap($long, 76, "\n * ");
+
+$output .= $close;
+
+print $output;
+</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
 	<key>input</key>
-	<string>none</string>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@D</string>
 	<key>name</key>
 	<string>Wrap docblock at 80 characters</string>
 	<key>output</key>
-	<string>afterSelectedText</string>
+	<string>replaceSelectedText</string>
 	<key>scope</key>
 	<string>comment.block.documentation.phpdoc.php</string>
 	<key>uuid</key>

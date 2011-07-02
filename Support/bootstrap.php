@@ -252,3 +252,8 @@ function textmate_docs_for_word($function) {
 
   return $_SERVER['TM_DRUPAL_API'] . '/api/search/' . $version . '/' . $function;
 }
+
+function textmate_docs_for_theme_hook($line) {
+  preg_match("/theme\('([a-z_]+)'/", $line, $matches);
+  return textmate_docs_for_word('theme_' . $matches[1]);
+}
