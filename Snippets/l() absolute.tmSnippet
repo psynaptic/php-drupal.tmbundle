@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>l(t('${1:Text}'), '${2:path}', array('absolute' =&gt; TRUE$0));$0</string>
+	<string>l(t('${1:Text}'), '${2:path}', array('absolute' =&gt; TRUE$3));$0</string>
 	<key>name</key>
 	<string>l() absolute</string>
 	<key>scope</key>
