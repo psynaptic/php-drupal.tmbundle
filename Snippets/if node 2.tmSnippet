@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>&lt;?php if node</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>text.html.php</string>
 	<key>tabTrigger</key>
 	<string>ifnode</string>
 	<key>uuid</key>

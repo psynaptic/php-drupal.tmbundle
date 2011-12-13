@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>&lt;?php l() absolute</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>text.html.php</string>
 	<key>tabTrigger</key>
 	<string>l</string>
 	<key>uuid</key>

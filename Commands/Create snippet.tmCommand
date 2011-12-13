@@ -37,7 +37,7 @@ print $output;
 	<key>output</key>
 	<string>replaceSelectedText</string>
 	<key>scope</key>
-	<string>text.html.basic, text.plain</string>
+	<string>text.html.php, text.plain</string>
 	<key>uuid</key>
 	<string>DAC597AC-2BCE-45E6-9DEF-E67150445F6F</string>
 </dict>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>&lt;?php render</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>text.html.php</string>
 	<key>tabTrigger</key>
 	<string>r</string>
 	<key>uuid</key>

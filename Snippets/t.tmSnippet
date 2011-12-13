@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>&lt;?php Wrap in t()</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>text.html.php</string>
 	<key>tabTrigger</key>
 	<string>t</string>
 	<key>uuid</key>

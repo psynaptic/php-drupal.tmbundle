@@ -5,10 +5,13 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+	<string>#!/bin/bash
+source "$TM_SUPPORT_PATH/lib/bash_init.sh" # might not be necessary
+. "$TM_SUPPORT_PATH/lib/webpreview.sh"
 html_header "PHP Drupal Bundle Help" "PHP Drupal"
 "$TM_SUPPORT_PATH/lib/markdown_to_help.rb" "$TM_BUNDLE_SUPPORT/help.markdown"
-html_footer</string>
+html_footer
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

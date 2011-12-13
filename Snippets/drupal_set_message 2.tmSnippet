@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>&lt;?php drupal_set_message</string>
 	<key>scope</key>
-	<string>text.html.basic</string>
+	<string>text.html.php</string>
 	<key>tabTrigger</key>
 	<string>dsm</string>
 	<key>uuid</key>
