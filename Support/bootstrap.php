@@ -100,7 +100,7 @@ function textmate_find_command($name) {
     $name = str_replace('schema_', '', $name);
   }
 
-  elseif (strpos($name, 'test_') === 0) {
+  elseif (strpos($name, 'unit_test_') === 0 || strpos($name, 'web_test_') === 0) {
     $folder = 'simpletest/';
   }
 
