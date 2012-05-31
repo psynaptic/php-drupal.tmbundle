@@ -1,12 +1,12 @@
 /**
- * Implements hook_update_N().
+ * ${1:Implements hook_update_N().}
  */
-function <?php print $basename; ?>_update_${1:N}(&\$sandbox) {
+function <?php print $basename; ?>_update_${2:N}(${3:&\$sandbox}) {
   \$ret = array();
 
-  ${2:// Update code goes here.}
+  ${4:// Update code goes here.}
 
   return \$ret;
 }
 
-$3
+$5
