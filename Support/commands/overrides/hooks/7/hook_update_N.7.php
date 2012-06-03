@@ -1,8 +1,8 @@
 /**
- * Implements hook_update_N().
+ * ${1:Implements hook_update_N().}
  */
-function <?php print $basename; ?>_update_N(&\$sandbox) {
-  ${1:// For non-multipass updates, the signature can simply be;
+function <?php print $basename; ?>_update_${2:N}(${3:&\$sandbox}) {
+  ${4:// For non-multipass updates, the signature can simply be;
   // function hook_update_N() {
 
   // For most updates, the following is sufficient.
@@ -48,4 +48,4 @@ function <?php print $basename; ?>_update_N(&\$sandbox) {
   throw new DrupalUpdateException('Something went wrong; here is what you should do.');}
 }
 
-$2
+$5
