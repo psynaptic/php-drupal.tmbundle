@@ -8,21 +8,31 @@
 	<string>#!/usr/bin/env php
 &lt;?php
 require $_SERVER['TM_BUNDLE_SUPPORT'] . '/bootstrap.php';
-$url = textmate_docs_for_word($_SERVER['TM_CURRENT_WORD']);
+$request = $_SERVER['TM_SELECTED_TEXT'];
+if ($request == '') $request = $_SERVER['TM_CURRENT_WORD'];
+$url = textmate_docs_for_word($request);
 print '&lt;meta http-equiv="refresh" content="0; URL='. $url .'"&gt;';</string>
 	<key>fallbackInput</key>
 	<string>none</string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^h</string>
 	<key>name</key>
 	<string>Documentation for Word</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.php</string>
 	<key>uuid</key>
 	<string>5F0E71DA-6D1D-4AFB-A396-31C650F6B313</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
