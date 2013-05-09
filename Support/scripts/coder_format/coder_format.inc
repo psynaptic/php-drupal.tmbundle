@@ -18,7 +18,7 @@ function coder_format_recursive($directory, $undo = FALSE) {
   $directory = str_replace('\\', '/', $directory);
 
   // Check if directory exists.
-  if (!file_check_directory($directory)) {
+  if (!is_dir($directory)) {
     drupal_set_message(t('%directory not found.', array('%directory' => $directory)), 'error');
     return FALSE;
   }
@@ -26,7 +26,12 @@ function coder_format_recursive($directory, $undo = FALSE) {
   // Fetch files to process.
   $mask   = '\.php$|\.module$|\.inc$|\.install|\.profile$';
   $nomask = array('.', '..', 'CVS', '.svn', '.git');
-  $files  = file_scan_directory($directory, $mask, $nomask, 0, TRUE);
+  if (function_exists('drush_scan_directory')) {
+    $files = drush_scan_directory($directory, '/' . $mask . '/', $nomask, 0, TRUE);
+  }
+  else {
+    $files = file_scan_directory($directory, $mask, $nomask, 0, TRUE);
+  }
   foreach ($files as $file) {
     coder_format_file($file->filename, $undo);
   }
@@ -53,17 +58,23 @@ function coder_format_file($filename, $undo = FALSE) {
     }
     // Save original filename.
     $original = $filename;
-    // Retrieve the file's directory.
-    $basename = file_check_path($filename);
+    // Retrieve the file's basename.
+    $basename = basename($filename);
     // Find all backups.
-    $mask  = '^' . preg_quote($basename) . '(\.coder\.orig)+$';
+    $dirname = dirname($filename);
+    $mask  = '^' . preg_quote($basename, '/') . '(\.coder\.orig)+$';
     $nomask = array('.', '..', 'CVS', '.svn', '.git');
-    $backups = file_scan_directory($filename, $mask, $nomask, 0, FALSE);
+    if (function_exists('drush_scan_directory')) {
+      $backups = drush_scan_directory($dirname, '/' . $mask . '/', $nomask, 0, FALSE);
+    }
+    else {
+      $backups = file_scan_directory($dirname, $mask, $nomask, 0, FALSE);
+    }
     // Find the latest backup to restore.
     ksort($backups);
     $latest = array_pop($backups);
     // Restore latest backup.
-    if (file_move($latest->filename, $original, FILE_EXISTS_REPLACE)) {
+    if (unlink($original) && rename($latest->filename, $original)) {
       drupal_set_message(t('%file restored.', array('%file' => $original)));
       return TRUE;
     }
@@ -76,7 +87,11 @@ function coder_format_file($filename, $undo = FALSE) {
   // Backup original file.
   // file_copy() replaces source filepath with target filepath.
   $sourcefile = $filename;
-  if (!file_copy($filename, $filename . '.coder.orig', FILE_EXISTS_RENAME)) {
+  $targetfile = $filename . '.coder.orig';
+  $status = file_exists($filename);
+  $status = $status && copy($filename, $targetfile);
+  $status = $status && file_exists($targetfile);
+  if (!$status) {
     drupal_set_message(t('%file could not be backup.', array('%file' => $filename)), 'error');
     return FALSE;
   }
@@ -330,12 +345,12 @@ function coder_format_string($code = '') {
               --$braces_in_case[$switches];
             }
             --$_coder_indent;
-            if (isset($braces_in_case[$switches]) && $braces_in_case[$switches] < 0 && $in_case) {
+            if ($braces_in_case[$switches] < 0 && $in_case) {
               // Decrease indent if last case in a switch is not terminated.
               --$_coder_indent;
               $in_case = FALSE;
             }
-            if (isset($braces_in_case[$switches]) && $braces_in_case[$switches] < 0) {
+            if ($braces_in_case[$switches] < 0) {
               $braces_in_case[$switches] = 0;
               $switches--;
             }
@@ -658,7 +673,6 @@ function coder_format_string($code = '') {
         case T_SWITCH:
           ++$switches;
           // Purposely fall through.
-        case T_IF:
         case T_FOR:
         case T_FOREACH:
         case T_GLOBAL:
@@ -691,9 +705,19 @@ function coder_format_string($code = '') {
           $result .= trim($text) . ' ';
           break;
 
+        case T_IF:
+          // Use "elseif" instead of "else if".
+          if (substr(rtrim($result), -4) == 'else') {
+            $result = rtrim($result);
+          }
+          coder_add_space($result);
+          // Append a space.
+          $result .= trim($text) . ' ';
+          break;
+
         case T_ELSE:
         case T_ELSEIF:
-          // Write else and else if to a new line.
+          // Write else and elseif to a new line.
           $result = rtrim($result);
           coder_br($result);
           $result .= trim($text) . ' ';
@@ -1073,20 +1097,20 @@ function coder_trim_php($code) {
  * @return
  *      The processed source code.
  */
-function coder_exec_processors($code, $prefix = '') {
+function coder_exec_processors($code, $prefix) {
   if (empty($prefix)) {
     return;
   }
   $tasks = get_defined_functions();
   $tasks = $tasks['user'];
   for ($c = 0, $cc = count($tasks); $c < $cc; ++$c) {
-    if (strpos($tasks[$c], $prefix) === FALSE) {
-      unset($tasks[$c]);
-    }
-    else {
+    // If the defined function starts with the specified prefix, invoke it.
+    if (strpos($tasks[$c], $prefix) === 0) {
+      // Store the results using the function name as key in $tasks.
       $tasks[$tasks[$c]] = call_user_func($tasks[$c]);
-      unset($tasks[$c]);
     }
+    // Remove the (indexed) key for every checked function.
+    unset($tasks[$c]);
   }
   uasort($tasks, 'coder_order_processors');
   foreach ($tasks as $func => $task) {
@@ -1196,7 +1220,25 @@ function coder_preprocessor_inline_comment() {
  * @} End of "defgroup coder_preprocessor".
  */
 
-function coder_postprocessor_multiple_vars() {
+/**
+ * @defgroup coder_postprocessor Postprocessors.
+ * @{
+ */
+function coder_postprocessor_cvs_id() {
+  return array(
+    '#title' => 'If the CVS keyword Id already exists, append a new line after it.',
+    '#search' => '@
+      ^(          # match start of a line
+        //.*      # match an inline comment followed by any characters
+        \$Id.*\$  # match a CVS Id tag
+      )$          # match end of a line
+      @mx',
+    '#replace' => "$1\n",
+  );
+}
+
+// @todo Disabled, since actually unwanted. Remove entirely?
+function _coder_postprocessor_multiple_vars() {
   return array(
     '#title' => 'Align equal signs of multiple variable assignments in the same column.',
     '#search' => '@
@@ -1211,7 +1253,7 @@ function coder_postprocessor_multiple_vars() {
   );
 }
 
-function coder_replace_multiple_vars($matches) {
+function _coder_replace_multiple_vars($matches) {
   // Retrieve all variable name = variable value pairs.
   $regex = '@
     ^           # match start of a line
@@ -1249,7 +1291,8 @@ function coder_replace_multiple_vars($matches) {
   return $return;
 }
 
-function coder_postprocessor_indent_multiline_array() {
+// @todo Disabled, since buggy.
+function _coder_postprocessor_indent_multiline_array() {
   // Still buggy, disabled for now.
   return array(
     '#title' => 'Align equal signs of multiline array assignments in the same column.',
@@ -1271,7 +1314,7 @@ function coder_postprocessor_indent_multiline_array() {
   );
 }
 
-function coder_replace_indent_multiline_array($matches) {
+function _coder_replace_indent_multiline_array($matches) {
   // Separate out important components of the multiline array:
   // (\s*) matches existing indent as \1
   // (([\'"]).+?\2|\$.+?|[+\-]?(?:0x)?[0-9A-F]+) matches key as \2
@@ -1315,9 +1358,9 @@ function coder_replace_indent_multiline_array($matches) {
   return $return;
 }
 
-function coder_postprocessor_array_rearrange() {
-  // @bug common.inc, comment.module:
-  // Not yet working properly 25/03/2007 sun.
+// @todo Disabled, since not yet working properly 25/03/2007 sun.
+// @see common.inc, comment.module
+function _coder_postprocessor_array_rearrange() {
   return array(
     '#title' => 'Break array elements into separate lines, indented one level.',
     // ([\040\t]*) matches blanks and tabs.
@@ -1330,7 +1373,7 @@ function coder_postprocessor_array_rearrange() {
   );
 }
 
-function coder_replace_array_rearrange($matches) {
+function _coder_replace_array_rearrange($matches) {
   // Retrieve all array items, except the last one.
   preg_match_all('/(.+? => .+?,) /', $matches[3], $items);
 
@@ -1354,24 +1397,11 @@ function coder_postprocessor_if_curly_braces() {
   return array(
     '#title' => 'Use curly braces even in situations where they are technically optional.',
     '#search' => '@
-      (\s*)           # match leading white-space, including newline
-      (if\ \(.+\)\ )  # match if statement
-      ([^\{].+;)      # match conditional executed code not starting with a curly brace, delimited by a semicolon.
+      (\s*)                    # match leading white-space, including newline
+      ((?:else)?if\ \(.+\)\ )  # match if/elseif statement
+      ([^\{].+;)               # match conditional executed code not starting with a curly brace, delimited by a semicolon.
       @x',
     '#replace' => '$1$2{$1  $3$1}',
-  );
-}
-
-function coder_postprocessor_elseif_not_else_if() {
-  // Replace all "else if" statements with "elseif"
-  return array(
-    '#title'   => 'Use "elseif" in place of "else if".',
-    '#search'  => '@
-      (else)          # match an else statement followed by whitespace
-      \s+             # match whitespace
-      (if\ ?\()       # match an if statement.
-      @x',
-    '#replace' => '$1$2',
   );
 }
 
